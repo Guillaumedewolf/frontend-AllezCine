@@ -1,4 +1,6 @@
-
+// les variables
+var moviesEcritureGenre = ""
+var moviesEcritureGenreCacher = ""
 //afficher plus de film boutton
 
 $( "#filmBoutton" ).click(function() {
@@ -33,28 +35,95 @@ $( "#serieBoutton" ).click(function() {
 // tableau  des films
 
 var films = [
-    { titre : "batmanmovie", annee:2017, genre: "comedie"},
-    { titre : "hostel", annee:2005, genre: "thriller"},
-    { titre : "inception", annee:2010, genre: "scifi"},
-    { titre : "intouchable", annee:2011, genre: "comedie"},
-    { titre : "lepatientanglais", annee:1996, genre: "dramatique"},
-    { titre : "lesdeuxtours", annee:2002, genre: "aventure"},
-    { titre : "seven", annee:1995, genre: "thriller"},
-    { titre : "shutterisland", annee:2010, genre: "thriller"},
-    { titre : "starwarsempire", annee:1980, genre: "scifi"},
-    { titre : "survivestyle5", annee:2004, genre: "comedie"},
-    { titre : "swissarmyman", annee:2016, genre: "comedie"},
-    { titre : "thefall", annee:2006, genre: "dramatique"},
-    { titre : "whatwedointheshadows", annee:2014, genre: "comedie"},
-    { titre : "zoolander", annee:2001, genre: "comedie"},
-    { titre : "", annee:20, genre: ""},
-    { titre : "", annee:20, genre: ""},
-    { titre : "", annee:20, genre: ""},
-    { titre : "", annee:20, genre: ""},
-    { titre : "", annee:20, genre: ""},
-    { titre : "", annee:20, genre: ""},
-    { titre : "", annee:20, genre: ""},
-    { titre : "", annee:20, genre: ""},
-    { titre : "", annee:20, genre: ""},
-    { titre : "", annee:20, genre: ""},
+    { titre : "Batman Movie", titreImg : "batmanmovie", annee:2017, genre: "comedie"},
+    { titre : "hostel", titreImg : "hostel", annee:2005, genre: "thriller"},
+    { titre : "inception", titreImg : "inception", annee:2010, genre: "scifi"},
+    { titre : "intouchables", titreImg : "intouchables", annee:2011, genre: "comedie"},
+    { titre : "le patient anglais", titreImg : "lepatientanglais", annee:1996, genre: "dramatique"},
+    { titre : "les deux tours", titreImg : "lesdeuxtours", annee:2002, genre: "aventure"},
+    { titre : "seven", titreImg : "seven", annee:1995, genre: "thriller"},
+    { titre : "shutter island", titreImg : "shutterisland", annee:2010, genre: "thriller"},
+    { titre : "star wars empire", titreImg : "starwarsempire", annee:1980, genre: "scifi"},
+    { titre : "survive style 5", titreImg : "survivestyle5", annee:2004, genre: "comedie"},
+    { titre : "swiss army man", titreImg : "swissarmyman", annee:2016, genre: "comedie"},
+    { titre : "the fall",  titreImg : "thefall", annee:2006, genre: "dramatique"},
+    { titre : "what we doint he shadows",  titreImg : "whatwedointheshadows", annee:2014, genre: "comedie"},
+    { titre : "zoolander", titreImg : "zoolander", annee:2001, genre: "comedie"},
+    // { titre : "", annee:20, genre: ""},
+    // { titre : "", annee:20, genre: ""},
+    // { titre : "", annee:20, genre: ""},
+    // { titre : "", annee:20, genre: ""},
+    // { titre : "", annee:20, genre: ""},
+    // { titre : "", annee:20, genre: ""},
+    // { titre : "", annee:20, genre: ""},
+    // { titre : "", annee:20, genre: ""},
+    // { titre : "", annee:20, genre: ""},
+    // { titre : "", annee:20, genre: ""},
    ];
+
+
+//afficher les film comedie
+ $("#comedie").click(function(){
+ //supprimer les anciens film
+ $("#moviesJS").html("")
+ moviesEcritureGenre = ""
+ //ecrire les nouveau film
+ 	for(i=0;i<films.length;i++){
+ 		if (films[i].genre == "comedie"){
+ 			moviesEcritureGenre += '<div class="movieAffiche col-md-2"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 		}
+ 	}
+ 	moviesEcritureGenre = '<div class="tabMovies">' + moviesEcritureGenre + '</div>'
+ 	$("#moviesJS").html(moviesEcritureGenre)
+
+ }
+ 	)
+
+
+
+ //afficher les film thriller
+ $("#thriller").click(function(){
+ //supprimer les anciens film
+ $("#moviesJS").html("")
+ moviesEcritureGenre = ""
+ //ecrire les nouveau film
+ 	for(i=0;i<films.length;i++){
+ 		if (films[i].genre == "thriller"){
+ 			moviesEcritureGenre += '<div class="movieAffiche col-md-2"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 		}
+ 	}
+ 	moviesEcritureGenre = '<div class="tabMovies">' + moviesEcritureGenre + '</div>'
+ 	$("#moviesJS").html(moviesEcritureGenre)
+
+ }
+ 	)
+
+
+
+//afficher tous les films
+
+
+$("#all").click(function(){
+ //supprimer les anciens film
+ $("#moviesJS").html("")
+ moviesEcritureGenre = ""
+ moviesEcritureGenreCacher = ""
+ var filmsMax = 0
+ //ecrire les nouveau film
+ 	for(i=0;i<films.length;i++){
+ 			if(i >= 12){
+ 			moviesEcritureGenre += '<div class="movieAffiche col-md-2"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			}
+ 			else {
+ 			moviesEcritureGenreCacher += '<div class="movieAffiche col-md-2"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			}
+
+ 	}
+ 	moviesEcritureGenre = '<div class="tabMovies">' + moviesEcritureGenre + '</div><div class="tabMovies" id="moviesCacher" >' + moviesEcritureGenreCacher + '</div>'
+ 	$("#moviesJS").html(moviesEcritureGenre)
+
+ }
+ 	)
+
+
+ 

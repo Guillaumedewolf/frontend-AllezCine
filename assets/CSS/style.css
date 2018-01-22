@@ -65,3 +65,10 @@ background-color: red !important;
 #moviesCacher, #seriesCacher{
 	display: none
 }
+
+/*img movies*/
+
+.tabMovies>.movieAffiche>img{
+	width: 150px;
+	height: 200px;
+}
