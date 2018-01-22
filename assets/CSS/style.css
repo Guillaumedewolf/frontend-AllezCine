@@ -1,10 +1,13 @@
 body {
-    font: 400 15px/1.8 Lato, sans-serif;
-    color: #777;
+    font: 400 15px/1.8 , sans-serif;
+    background-color: white;
 }
-
-
-
+#allez {
+  color:red; font-size: 20px; font-weight: bolder;
+}
+#cine {
+  color:white; font-size: 20px; font-weight: bolder;
+}
 .navbar {
     font-family: Montserrat, sans-serif;
     margin-bottom: 0;
@@ -18,11 +21,12 @@ body {
     color: white !important;
 }
 .navbar-nav li a:hover {
-    color: red !important;
+    color: white !important;
+background-color: red !important;
 }
 .navbar-nav li.active a {
-    color: #fff !important;
-    background-color: #29292c !important;
+    color: white !important;
+    background-color: red !important;
 }
 .navbar-default .navbar-toggle {
     border-color: transparent;
@@ -35,10 +39,10 @@ body {
     color: #000 !important;
 }
 .dropdown-menu li a:hover {
-    background-color:  !important;
+    background-color:white !important;
 }
 .jumbotron {
-  background-color: black;
+  background-color: black !important;
 }
 .carousel-inner img {
     -webkit-filter: grayscale(90%);
