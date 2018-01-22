@@ -23,3 +23,38 @@ $( "#serieBoutton" ).click(function() {
 	}
 });
 
+
+
+
+
+// catégorie film
+
+
+// tableau  des films
+
+var films = [
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+    { titre : "", annee:20, genre: ""},
+   ];
