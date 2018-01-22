@@ -60,3 +60,8 @@ background-color: red !important;
     display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
 }
+
+/*toogle sur les film et serie (boutton plus/moins*/
+#moviesCacher, #seriesCacher{
+	display: none
+}
