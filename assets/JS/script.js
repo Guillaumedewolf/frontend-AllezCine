@@ -49,46 +49,45 @@ var films = [
     { titre : "the fall",  titreImg : "thefall", annee:2006, genre: "dramatique"},
     { titre : "what we doint he shadows",  titreImg : "whatwedointheshadows", annee:2014, genre: "comedie"},
     { titre : "zoolander", titreImg : "zoolander", annee:2001, genre: "comedie"},
-    // { titre : "", annee:20, genre: ""},
-    // { titre : "", annee:20, genre: ""},
-    // { titre : "", annee:20, genre: ""},
-    // { titre : "", annee:20, genre: ""},
-    // { titre : "", annee:20, genre: ""},
-    // { titre : "", annee:20, genre: ""},
-    // { titre : "", annee:20, genre: ""},
-    // { titre : "", annee:20, genre: ""},
-    // { titre : "", annee:20, genre: ""},
-    // { titre : "", annee:20, genre: ""},
+    // { titre : "", titreImg  : "", annee:20, genre: ""},
+  	// { titre : "", titreImg  : "", annee:20, genre: ""},
+    // { titre : "", titreImg  : "", annee:20, genre: ""},
+    // { titre : "", titreImg  : "", annee:20, genre: ""},
+   	// { titre : "", titreImg  : "", annee:20, genre: ""},
+    // { titre : "", titreImg  : "", annee:20, genre: ""},
+    // { titre : "", titreImg  : "", annee:20, genre: ""},
+   	// { titre : "", titreImg  : "", annee:20, genre: ""},
+    // { titre : "", titreImg  : "", annee:20, genre: ""},
+    // { titre : "", titreImg  : "", annee:20, genre: ""},
    ];
 
 
 //afficher les film comedie
+
  $("#comedie").click(function(){
- //supprimer les anciens film
- $("#moviesJS").html("")
- moviesEcritureGenre = ""
- //ecrire les nouveau film
- 	for(i=0;i<films.length;i++){
- 		if (films[i].genre == "comedie"){
- 			moviesEcritureGenre += '<div class="movieAffiche col-md-2"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
- 		}
- 	}
- 	moviesEcritureGenre = '<div class="tabMovies">' + moviesEcritureGenre + '</div>'
- 	$("#moviesJS").html(moviesEcritureGenre)
-
- }
- 	)
-
-
-
- //afficher les film thriller
+ 	genreMovies("comedie")
+ })
+//afficher les film thriller
  $("#thriller").click(function(){
+ 	genreMovies("thriller")
+ })
+ //afficher les film sciences fiction
+ $("#scifi").click(function(){
+ 	genreMovies("scifi")
+ })
+ //afficher les film dramatique
+ $("#dramatique").click(function(){
+ 	genreMovies("dramatique")
+ })
+
+ //fonction afficher les film du genre (-de 12 films)
+ function genreMovies(genre){
  //supprimer les anciens film
  $("#moviesJS").html("")
  moviesEcritureGenre = ""
  //ecrire les nouveau film
  	for(i=0;i<films.length;i++){
- 		if (films[i].genre == "thriller"){
+ 		if (films[i].genre == genre){
  			moviesEcritureGenre += '<div class="movieAffiche col-md-2"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
  		}
  	}
@@ -96,14 +95,18 @@ var films = [
  	$("#moviesJS").html(moviesEcritureGenre)
 
  }
- 	)
+ 
 
 
 
-//afficher tous les films
+ 
 
-
+//afficher tous les films (+ de 12 film)
 $("#all").click(function(){
+	allMovies()
+})
+
+function allMovies(){
  //supprimer les anciens film
  $("#moviesJS").html("")
  moviesEcritureGenre = ""
@@ -111,7 +114,7 @@ $("#all").click(function(){
  var filmsMax = 0
  //ecrire les nouveau film
  	for(i=0;i<films.length;i++){
- 			if(i >= 12){
+ 			if(i < 12){
  			moviesEcritureGenre += '<div class="movieAffiche col-md-2"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
  			}
  			else {
@@ -123,7 +126,7 @@ $("#all").click(function(){
  	$("#moviesJS").html(moviesEcritureGenre)
 
  }
- 	)
+ 	
 
 
- 
+ allMovies()

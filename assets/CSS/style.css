@@ -61,6 +61,9 @@ background-color: red !important;
   }
 }
 
+
+
+
 /*toogle sur les film et serie (boutton plus/moins*/
 #moviesCacher, #seriesCacher{
 	display: none
@@ -72,3 +75,66 @@ background-color: red !important;
 	width: 150px;
 	height: 200px;
 }
+
+
+
+
+/*css reseaux sociaux */
+
+#blockSocial>div>i{
+	float:right;
+	margin-right: 10px;
+	line-height: 20px;
+}
+
+#twitter,#facebook,#dribbble,#google{
+	margin-left: -100px;
+	width: 120px;
+	height: 30px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 20px;
+	border-top-right-radius:15px;
+	border-bottom-right-radius: 15px;
+	position: fixed;
+	transition: 0.5s;
+	color: white;
+}
+
+#twitter{
+	background-color: #1DA1F2;
+	top:150px;
+	left:10px;
+}
+#facebook{
+	background-color: #4867AA;
+	top:180px;
+	left:10px;
+}
+#dribbble{
+	background-color: #E74D89;
+	top:210px;
+	left:10px;
+}
+#google{
+	background-color: #DD4D40;
+	top:240px;
+	left:10px;
+}
+
+#twitter:hover{
+	margin-left: -20px;
+}
+
+#facebook:hover{
+	margin-left: -20px
+}
+
+#dribbble:hover{
+	margin-left: -20px
+}
+
+#google:hover{
+	margin-left: -20px
+}
+
