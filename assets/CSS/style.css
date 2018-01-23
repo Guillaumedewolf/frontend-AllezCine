@@ -138,3 +138,14 @@ background-color: red !important;
 	margin-left: -20px
 }
 
+/*popup*/
+
+#popupFilm{
+	display:none;
+	position: fixed;
+	width: 50%;
+	height: 500px;
+	top:100px;
+	left:25%;
+	background-color: white;
+}

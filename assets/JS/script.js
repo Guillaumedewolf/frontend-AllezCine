@@ -88,7 +88,7 @@ var films = [
  //ecrire les nouveau film
  	for(i=0;i<films.length;i++){
  		if (films[i].genre == genre){
- 			moviesEcritureGenre += '<div class="movieAffiche col-md-2"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			moviesEcritureGenre += '<div class="movieAffiche col-md-2" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
  		}
  	}
  	moviesEcritureGenre = '<div class="tabMovies">' + moviesEcritureGenre + '</div>'
@@ -115,7 +115,7 @@ function allMovies(){
  //ecrire les nouveau film
  	for(i=0;i<films.length;i++){
  			if(i < 12){
- 			moviesEcritureGenre += '<div class="movieAffiche col-md-2"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			moviesEcritureGenre += '<div class="movieAffiche col-md-2" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
  			}
  			else {
  			moviesEcritureGenreCacher += '<div class="movieAffiche col-md-2"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
@@ -129,4 +129,37 @@ function allMovies(){
  	
 
 
- allMovies()
+
+allMovies()
+ 
+
+
+
+ // popup film
+
+
+ $(".movieAffiche").click(function(){
+	popup($(this).attr('value'))
+})
+
+//fonction popup
+
+function popup(valeur){
+	var ecrirePopup = '<div id="titrePop">'+films[valeur].titre+'</div><div id="anneePop">'+films[valeur].annee+'</div><div id="genrePop">'+films[valeur].genre+'</div>'
+	$("#popupFilm").html(ecrirePopup)
+	$("#popupFilm").css("display","block")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
