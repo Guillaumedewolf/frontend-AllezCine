@@ -1,12 +1,16 @@
 body {
-    font: 400 15px/1.8 , sans-serif;
     background-color: white;
 }
+/*Brand*/
 #allez {
   color:red; font-size: 20px; font-weight: bolder;
 }
 #cine {
   color:white; font-size: 20px; font-weight: bolder;
+}
+/*nav*/
+nav {
+  position: absolute ;
 }
 .navbar {
     font-family: Montserrat, sans-serif;
@@ -14,7 +18,7 @@ body {
     background: transparent;
     border: 0;
     font-size: 11px !important;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     opacity: 0.9;
 }
 .navbar li a, .navbar .navbar-brand {
@@ -28,7 +32,7 @@ background-color: red !important;
     color: white !important;
     background-color: red !important;
 }
-.navbar-default .navbar-toggle {
+.navbar-invers .navbar-toggle {
     border-color: transparent;
 }
 .open .dropdown-toggle {
@@ -41,28 +45,24 @@ background-color: red !important;
 .dropdown-menu li a:hover {
     background-color:white !important;
 }
+/*carousel 1*/
 .jumbotron {
   background-color: black !important;
 }
-.carousel-inner img {
-    -webkit-filter: grayscale(90%);
-    filter: grayscale(90%); /* make all photos black and white */
-    height: ;
-    width: 100%; /* Set width to 100% */
-    margin: auto;
-    border-radius: 20px;
+.carousel {
+  position: relative ;
 }
-.carousel-caption h3 {
-    color:;
+ol.carousel-indicators li,
+ol.carousel-indicators li.active {
+  float: center;
+  width: 25px;
+  height: 1px;
+  margin: 0;
+  margin-left: 10px;
+  border-radius: 0;
+  border: 2;
+  background: transparent;
 }
-@media (max-width: 600px) {
-  .carousel-caption {
-    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-  }
-}
-
-
-
 
 /*toogle sur les film et serie (boutton plus/moins*/
 #moviesCacher, #seriesCacher{
