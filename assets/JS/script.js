@@ -1,6 +1,5 @@
 // les variables
-var moviesEcritureGenre = ""
-var moviesEcritureGenreCacher = ""
+var shopNombreFilm = 0
 //afficher plus de film boutton
 
 $( "#filmBoutton" ).click(function() {
@@ -109,8 +108,8 @@ $("#all").click(function(){
 function allMovies(){
  //supprimer les anciens film
  $("#moviesJS").html("")
- moviesEcritureGenre = ""
- moviesEcritureGenreCacher = ""
+ var moviesEcritureGenre = ""
+ var moviesEcritureGenreCacher = ""
  var filmsMax = 0
  //ecrire les nouveau film
  	for(i=0;i<films.length;i++){
@@ -153,7 +152,30 @@ function popup(valeur){
 
 
 
+// shop movie
 
+
+function allMovies(){
+ //supprimer les anciens film
+ $("shopMovieHaut").html("")
+ $("shopMovieBas").html("")
+var shopEcritureHaut = ""
+var shopEcritureBas = ""
+ //ecrire les nouveau film
+ 	for(i=shopNombreFilm;i<films.length;i++){
+ 			if(i < shopNombreFilm+4){
+ 			shopEcritureHaut += '<div class="movieAffiche col-md-3" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			}
+ 			else if(i < shopNombreFilm+8){
+ 			shopEcritureBas += '<div class="movieAffiche col-md-2"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			}
+
+ 	}
+
+ 	$("#shopMovieHaut").html(shopEcritureHaut)
+ 	$("#shopMovieBas").html(shopEcritureBas)
+
+ }
 
 
 
