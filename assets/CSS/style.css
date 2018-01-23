@@ -140,12 +140,13 @@ ol.carousel-indicators li.active {
 
 /*popup*/
 
-#popupFilm{
-	display:none;
-	position: fixed;
-	width: 50%;
-	height: 500px;
-	top:100px;
-	left:25%;
-	background-color: white;
+#imgFilm{
+	float: right;
+	margin-top: 7px;
+
 }
+
+#imgFilm>img{
+	height: 300px;
+}
+

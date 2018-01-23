@@ -65,7 +65,7 @@ $( "#serieBoutton" ).click(function() {
 // tableau  des films
 
 var films = [
-    { titre : "Batman Movie", titreImg : "batmanmovie", annee:2017, genre: "comedie"},
+    { titre : "Batman Movie", titreImg : "batmanmovie", annee:2017, genre: "comedie", video:"https://www.youtube.com/embed/9mznUFqFy74", resumer:""},
     { titre : "hostel", titreImg : "hostel", annee:2005, genre: "thriller"},
     { titre : "inception", titreImg : "inception", annee:2010, genre: "scifi"},
     { titre : "intouchables", titreImg : "intouchables", annee:2011, genre: "comedie"},
@@ -118,7 +118,7 @@ var films = [
  //ecrire les nouveau film
  	for(i=0;i<films.length;i++){
  		if (films[i].genre == genre){
- 			moviesEcritureGenre += '<div class="movieAffiche col-md-2" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			moviesEcritureGenre += '<div class="movieAffiche col-md-2" value='+i+' data-toggle="modal" data-target="#modalFilm"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
  		}
  	}
  	moviesEcritureGenre = '<div class="tabMovies">' + moviesEcritureGenre + '</div>'
@@ -145,7 +145,7 @@ function allMovies(){
  //ecrire les nouveau film
  	for(i=0;i<films.length;i++){
  			if(i < 12){
- 			moviesEcritureGenre += '<div class="movieAffiche col-md-2" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			moviesEcritureGenre += '<div class="movieAffiche col-md-2" value='+i+' data-toggle="modal" data-target="#modalFilm"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
  			}
  			else {
  			moviesEcritureGenreCacher += '<div class="movieAffiche col-md-2"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
@@ -175,7 +175,18 @@ allMovies()
 //fonction popup
 
 function popup(valeur){
-	var ecrirePopup = '<div id="titrePop">'+films[valeur].titre+'</div><div id="anneePop">'+films[valeur].annee+'</div><div id="genrePop">'+films[valeur].genre+'</div>'
-	$("#popupFilm").html(ecrirePopup)
-	$("#popupFilm").css("display","block")
+	var ecrirePopup = films[valeur].titre
+	//ecriture titre
+	$("#titreFilm").html(ecrirePopup)
+	//ecriture info
+	ecrirePopup = '<iframe width="560px" height="315px" src="'+films[valeur].video+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+	$("#bandeAnnonceFilm").html(ecrirePopup)
+	ecrirePopup = '<img src="assets/images/' + films[valeur].titreImg + '-' + films[valeur].annee+ '-' + films[valeur].genre + '.jpg" alt="">'
+	$("#imgFilm").html(ecrirePopup)
+	ecrirePopup = films[valeur].annee
+	$("#anneeFilm").html(ecrirePopup)
+	ecrirePopup = films[valeur].genre
+	$("#genreFilm").html(ecrirePopup)
+	ecrirePopup = films[valeur].resumer
+	$("#resumerFilm").html(ecrirePopup)
 }
