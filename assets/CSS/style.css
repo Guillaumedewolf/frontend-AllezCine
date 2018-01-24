@@ -1,151 +1,272 @@
 body {
-    background-color: white;
+  background-color: white;
+  padding-bottom: 5px;
+  color: #5a5a5a;
+  height: 100%;
 }
+
 /*Brand*/
-#allez {
-  color:red; font-size: 20px; font-weight: bolder;
+
+#red {
+  color: red;
+  font-size: 40px;
+  font-weight: bolder;
 }
-#cine {
-  color:white; font-size: 20px; font-weight: bolder;
+
+#white {
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
 }
+
 /*nav*/
-nav {
-  position: absolute ;
+
+navbar-wrapper {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2 !important;
 }
+
 .navbar {
-    font-family: Montserrat, sans-serif;
-    margin-bottom: 0;
-    background: transparent;
-    border: 0;
-    font-size: 11px !important;
-    letter-spacing: 2px;
-    opacity: 0.9;
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 0;
+  background: transparent;
+  border: 0;
+  font-size: 11px !important;
+  letter-spacing: 2px;
+  opacity: 0.9;
 }
+
 .navbar li a, .navbar .navbar-brand {
-    color: white !important;
+  color: white !important;
 }
+
 .navbar-nav li a:hover {
-    color: white !important;
-background-color: red !important;
+  color: white !important;
+  background-color: red !important;
 }
+
 .navbar-nav li.active a {
-    color: white !important;
-    background-color: red !important;
+  color: white !important;
+  background-color: red !important;
 }
+
 .navbar-invers .navbar-toggle {
-    border-color: transparent;
+  border-color: transparent;
 }
+
 .open .dropdown-toggle {
-    color: #fff;
-    background-color: #555 !important;
+  color: #fff;
+  background-color: #555 !important;
 }
+
 .dropdown-menu li a {
-    color: #000 !important;
+  color: #000 !important;
 }
+
 .dropdown-menu li a:hover {
-    background-color:white !important;
+  background-color: !important;
 }
+
+/*Bar de recherche*/
+
+#form {
+  background-color: rgba(0, 0, 0, 0.4)!important;
+  border-top-left-radius: 100px !important;
+  border-bottom-left-radius: 100px !important;
+  border: none !important;
+}
+
+input.form-control::placeholder {
+  color: white;
+}
+
+input.form-control {
+  color: white;
+}
+
+button#glyphicon {
+  border-top-right-radius: 100px !important;
+  border-bottom-right-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.4)!important;
+  border: none !important;
+  height: 100%;
+}
+
+.glyphicon {
+  color: white;
+}
+
 /*carousel 1*/
+
 .jumbotron {
-  background-color: black !important;
+  background-color: transparent !important;
+  margin-top: -6% !important;
+  z-index: 2 !important;
 }
-.carousel {
-  position: relative ;
+
+.item img {
+  height: 800px;
+  filter: brightness(50%);
 }
-ol.carousel-indicators li,
-ol.carousel-indicators li.active {
+
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none;
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
+
+ol.carousel-indicators li {
   float: center;
-  width: 25px;
-  height: 1px;
+  width: 30px;
+  height: 5px;
   margin: 0;
   margin-left: 10px;
-  border-radius: 0;
   border: 2;
   background: transparent;
+  background-color: white;
+  border: none;
+}
+
+ol.carousel-indicators li.active {
+  float: center;
+  width: 30px;
+  height: 5px;
+  margin: 0;
+  margin-left: 10px;
+  border: 2;
+  background-color: red;
+  transition: all 0.25s ease;
+}
+
+/*Carousel 2*/
+
+.carousel {}
+
+/*Boutton Films*/
+
+.btn-inverse: hover, .btn par défaut: focus, .btn par défaut: actif, .btn-inverse.active, .Open .dropdown-toggle.btn-default {
+  color: # 333;
+  background-color: #ebebeb !important;
+  border-color: #adadad;
+}
+
+div#movies .btn-group .active {
+  background-color: red !important;
+}
+
+button#all {
+  margin-right: 5px;
+}
+
+button#comedie {
+  margin-right: 5px;
+}
+
+button#thriller {
+  margin-right: 5px;
+}
+
+button#scifi {
+  margin-right: 5px;
+}
+
+button#dramatique {
+  margin-right: 5px;
 }
 
 /*toogle sur les film et serie (boutton plus/moins*/
-#moviesCacher, #seriesCacher{
-	display: none
+
+#moviesCacher, #seriesCacher {
+  display: none;
 }
 
 /*img movies*/
 
-.tabMovies>.movieAffiche>img{
-	width: 150px;
-	height: 200px;
+.tabMovies>.movieAffiche>img {
+  width: 150px;
+  height: 200px;
+  position: relative;
 }
 
+/*Boutton Series*/
 
+div#series .btn-group .active {
+  background-color: red !important;
+}
 
+button#allSeries {
+  margin-right: 5px;
+}
+
+button#comedieSeries {
+  margin-right: 5px;
+}
+
+button#action {
+  margin-right: 5px;
+}
 
 /*css reseaux sociaux */
 
-#blockSocial>div>i{
-	float:right;
-	margin-right: 10px;
-	line-height: 20px;
+#blockSocial>div>i {
+  float: right;
+  margin-right: 10px;
+  line-height: 20px;
 }
 
-#twitter,#facebook,#dribbble,#google{
-	margin-left: -100px;
-	width: 120px;
-	height: 30px;
-	padding-bottom: 5px;
-	padding-top: 5px;
-	padding-left: 20px;
-	border-top-right-radius:15px;
-	border-bottom-right-radius: 15px;
-	position: fixed;
-	transition: 0.5s;
-	color: white;
+#twitter, #facebook, #dribbble, #google {
+  margin-left: -100px;
+  width: 120px;
+  height: 30px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: fixed;
+  transition: 0.5s;
+  color: white;
 }
 
-#twitter{
-	background-color: #1DA1F2;
-	top:150px;
-	left:10px;
-}
-#facebook{
-	background-color: #4867AA;
-	top:180px;
-	left:10px;
-}
-#dribbble{
-	background-color: #E74D89;
-	top:210px;
-	left:10px;
-}
-#google{
-	background-color: #DD4D40;
-	top:240px;
-	left:10px;
+#twitter {
+  background-color: #1DA1F2;
+  top: 150px;
+  left: 10px;
 }
 
-#twitter:hover{
-	margin-left: -20px;
+#facebook {
+  background-color: #4867AA;
+  top: 180px;
+  left: 10px;
 }
 
-#facebook:hover{
-	margin-left: -20px
+#dribbble {
+  background-color: #E74D89;
+  top: 210px;
+  left: 10px;
 }
 
-#dribbble:hover{
-	margin-left: -20px
+#google {
+  background-color: #DD4D40;
+  top: 240px;
+  left: 10px;
 }
 
-#google:hover{
-	margin-left: -20px
+#twitter:hover {
+  margin-left: -20px;
 }
 
-/*popup*/
+#facebook:hover {
+  margin-left: -20px
+}
 
-#popupFilm{
-	display:none;
-	position: fixed;
-	width: 50%;
-	height: 500px;
-	top:100px;
-	left:25%;
-	background-color: white;
+#dribbble:hover {
+  margin-left: -20px
+}
+
+#google:hover {
+  margin-left: -20px
 }

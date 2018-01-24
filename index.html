@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>AlloCiné</title>
+	<title>AllezCiné</title>
 	<link rel="stylesheet" href="assets/CSS/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -11,9 +11,9 @@
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-<!-- nav -->
+	<!-- nav -->
 	<header>
-		<nav class="navbar navbar-invers navbar-fixed-top">
+		<nav class="navbar-wrapper navbar navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -21,7 +21,7 @@
 			 <span class="icon-bar"></span>
 			 <span class="icon-bar"></span>
 		 </button>
-					<a class="navbar-brand" href="#myPage">ALLEZCINE!</a>
+					<a class="navbar-brand" href="#myPage"><span id="red">ALLEZ</span><span id="white">CINE!</span></a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">
@@ -40,7 +40,15 @@
 								<li><a href="#">Fiction</a></li>
 							</ul>
 						</li>
-						<li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+						<!-- bar de recherche -->
+						<form class="navbar-form navbar-left">
+							<div class="input-group">
+								<input type="text" id="form" class="form-control" placeholder="Search">
+								<span class="input-group-btn">
+                        <button type="button" id="glyphicon" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+								</span>
+							</div>
+						</form>
 					</ul>
 				</div>
 			</div>
@@ -49,68 +57,60 @@
 	<!-- carousel 1 -->
 	<div class="jumbotron">
 
-			<div id="myCarousel" class="carousel slide" data-ride="carousel">
-				<!-- Indicators -->
-				<ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-					<li data-target="#myCarousel" data-slide-to="2"></li>
-					<li data-target="#myCarousel" data-slide-to="3"></li>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
 
-				</ol>
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner">
-					<div class="item active">
-						<img src="./assets/images/1500x500.jpg" alt="Batman Movie" style="width:300%;">
-						<div class="carousel-caption">
-							<h3></h3>
-							<p></p>
-						</div>
+			</ol>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="./assets/images/1500x500.jpg" alt="Batman Movie" style="width:300%;">
+				</div>
+
+				<div class="item">
+					<img src="./assets/images/deadpool___2014_teaser_movie_banner_by_crustydog-d53hucm.jpg" alt="Inception" style="width:300%;">
+				</div>
+
+				<div class="item">
+					<img src="./assets/images/justice-league-2017.jpg" alt="Hostel" style="width:300%;">
+					<div class="carousel-caption">
+						<h3></h3>
+						<p></p>
 					</div>
+				</div>
 
-					<div class="item">
-						<img src="./assets/images/deadpool___2014_teaser_movie_banner_by_crustydog-d53hucm.jpg" alt="Inception" style="width:300%;">
-						<div class="carousel-caption">
-							<h3></h3>
-							<p></p>
-						</div>
-					</div>
-
-					<div class="item">
-						<img src="./assets/images/justice-league-2017.jpg" alt="Hostel" style="width:300%;">
-						<div class="carousel-caption">
-							<h3></h3>
-							<p></p>
-						</div>
-					</div>
-
-					<div class="item">
-						<img src="./assets/images/let_the_right_one_in___2008_movie_banner_by_crustydog-d53tucl.jpg" alt="Intouchables" style="width:300%;">
-						<div class="carousel-caption">
-							<h3></h3>
-							<p></p>
-						</div>
+				<div class="item">
+					<img src="./assets/images/let_the_right_one_in___2008_movie_banner_by_crustydog-d53tucl.jpg" alt="Intouchables" style="width:300%;">
+					<div class="carousel-caption">
+						<h3></h3>
+						<p></p>
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
 
 
-<!-- login -->
+	<!-- login -->
 	<div id="login">
 	</div>
-<!-- carousel 2 -->
+	<!-- carousel 2 -->
 	<div class="carousel slide" data-ride="carousel">
 	</div>
 
 	<div id="featuredMovies">
 		<h2>FEATURED MOVIES</h2>
-		<div class="filtre" id="movies">
-			<button id="all">all</button>
-			<button id="comedie">comédie</button>
-			<button id="thriller">thriller</button>
-			<button id="scifi">sciences Fiction</button>
-			<button id="dramatique">dramatique</button>
+		<div class="btn-group" class="filtre" id="movies">
+			<button class="btn btn-inverse" id="all">all</button>
+			<button class="btn btn-inverse" id="comedie">comédie</button>
+			<button class="btn btn-inverse" id="thriller">thriller</button>
+			<button class="btn btn-inverse" id="scifi">sciences Fiction</button>
+			<button class="btn btn-inverse" id="dramatique">dramatique</button>
 		</div>
 		<div class="row" id="moviesJS">
 			<!-- liste des films créer en JS -->
@@ -122,150 +122,150 @@
 
 	<div id="featuredSeries">
 		<h2>FEATURED SERIES</h2>
-		<div class="filtre" id="series">
-			<div>all</div>
-			<div>action</div>
-			<div>policier</div>
+		<div class="btn-group" class="filtre" id="series">
+			<button class="btn btn-inverse" id="allSeries">All</button>
+			<button class="btn btn-inverse" id="comedieSeries">Comédie</button>
+			<button class="btn btn-inverse" id="action">Action</button>
 		</div>
 		<div class="tabSeries">
 			<!-- section 1-->
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<!-- section 2-->
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 		</div>
 		<div class="tabSeries" id="seriesCacher">
 			<!-- section 3 cacher-->
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<!-- section 4 cacher-->
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 			<div class="serieAffiche col-md-2">
 				<img src="assets/images/afficheTest.jpg" alt="">
-				<div class ="movieTitre">test</div>
-				<div class ="movieAnnée">2018</div>
+				<div class="movieTitre">test</div>
+				<div class="movieAnnée">2018</div>
 			</div>
 		</div>
 		<div class="plusMoins" id="plusMoinsSeries">
 			<button id="serieBoutton">PLUS DE SERIES</button>
 		</div>
 	</div>
-<!-- shop -->
+	<!-- shop -->
 	<div id="shop">
 		<h2></h2>
 		<div id="shopMovies"></div>
 		<div id="bandeAnnonce"></div>
 	</div>
-<!-- contact -->
+	<!-- contact -->
 	<div id="contact" class="container">
 		<h3 class="text">CONTACT US</h3>
 		<p class="text-center"><em></em></p>
@@ -297,28 +297,24 @@
 				</div>
 			</div>
 		</div>
-	<!--réseaux sociaux -->
-	<div id="blockSocial">
-		<div id="twitter">Twitter<i class="fa fa-twitter" aria-hidden="true"></i></div>
-		<div id="facebook">Facebook<i class="fa fa-facebook" aria-hidden="true"></i></div>
-		<div id="dribbble">dribble<i class="fa fa-dribbble" aria-hidden="true"></i></div>
-		<div id="google">google+<i class="fa fa-google-plus" aria-hidden="true"></i></div>
-	</div>
-	<!--popup info film-->
-	<button value=1 id="test">popup</button>
-	<div id="popupFilm">
-		<div id="titrePop">test</div>
-		<div id="anneePop">2017</div>
-		<div id="genrePop">comedie</div>
-	</div>
-	<footer>
+		<!--réseaux sociaux -->
+		<div id="blockSocial">
+			<div id="twitter">Twitter<i class="fa fa-twitter" aria-hidden="true"></i></div>
+			<div id="facebook">Facebook<i class="fa fa-facebook" aria-hidden="true"></i></div>
+			<div id="dribbble">dribble<i class="fa fa-dribbble" aria-hidden="true"></i></div>
+			<div id="google">google+<i class="fa fa-google-plus" aria-hidden="true"></i></div>
+		</div>
+
+		<footer>
 
 
-	</footer>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/JS/script.js"></script>
-	<script src="https://use.fontawesome.com/558d76d182.js"></script>
+
+		</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="assets/JS/script.js"></script>
+		<script src="https://use.fontawesome.com/558d76d182.js"></script>
 
 </body>
 
