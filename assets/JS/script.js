@@ -40,8 +40,7 @@ $(document).ready(function(){
     });
 
 // les variables
-var moviesEcritureGenre = ""
-var moviesEcritureGenreCacher = ""
+var stopVideoYT
 //afficher plus de film boutton
 
 $( "#filmBoutton" ).click(function() {
@@ -76,30 +75,30 @@ $( "#serieBoutton" ).click(function() {
 // tableau  des films
 
 var films = [
-    { titre : "Batman Movie", titreImg : "batmanmovie", annee:2017, genre: "comedie"},
-    { titre : "hostel", titreImg : "hostel", annee:2005, genre: "thriller"},
-    { titre : "inception", titreImg : "inception", annee:2010, genre: "scifi"},
-    { titre : "intouchables", titreImg : "intouchables", annee:2011, genre: "comedie"},
-    { titre : "le patient anglais", titreImg : "lepatientanglais", annee:1996, genre: "dramatique"},
-    { titre : "les deux tours", titreImg : "lesdeuxtours", annee:2002, genre: "aventure"},
-    { titre : "seven", titreImg : "seven", annee:1995, genre: "thriller"},
-    { titre : "shutter island", titreImg : "shutterisland", annee:2010, genre: "thriller"},
-    { titre : "star wars empire", titreImg : "starwarsempire", annee:1980, genre: "scifi"},
-    { titre : "survive style 5", titreImg : "survivestyle5", annee:2004, genre: "comedie"},
-    { titre : "swiss army man", titreImg : "swissarmyman", annee:2016, genre: "comedie"},
-    { titre : "the fall",  titreImg : "thefall", annee:2006, genre: "dramatique"},
-    { titre : "what we doint he shadows",  titreImg : "whatwedointheshadows", annee:2014, genre: "comedie"},
-    { titre : "zoolander", titreImg : "zoolander", annee:2001, genre: "comedie"},
-    // { titre : "", titreImg  : "", annee:20, genre: ""},
-  	// { titre : "", titreImg  : "", annee:20, genre: ""},
-    // { titre : "", titreImg  : "", annee:20, genre: ""},
-    // { titre : "", titreImg  : "", annee:20, genre: ""},
-   	// { titre : "", titreImg  : "", annee:20, genre: ""},
-    // { titre : "", titreImg  : "", annee:20, genre: ""},
-    // { titre : "", titreImg  : "", annee:20, genre: ""},
-   	// { titre : "", titreImg  : "", annee:20, genre: ""},
-    // { titre : "", titreImg  : "", annee:20, genre: ""},
-    // { titre : "", titreImg  : "", annee:20, genre: ""},
+    { titre : "Batman Movie",              titreImg : "batmanmovie",          annee:2017, genre: "comedie",    video:"https://www.youtube.com/embed/9mznUFqFy74", resumer:"Il en rêvait depuis La Grande Aventure Lego : Batman est enfin le héros de son propre film ! Mais la situation a bien changé à Gotham – et s'il veut sauver la ville des griffes du Joker, il lui faudra arrêter de jouer au justicier masqué et découvrir le travail d'équipe ! Peut-être pourra-t-il alors se décoincer un peu… "},
+    { titre : "hostel",                    titreImg : "hostel",               annee:2005, genre: "thriller",   video:"https://www.youtube.com/embed/cVBdQiUHhZI", resumer:""},
+    { titre : "inception",                 titreImg : "inception",            annee:2010, genre: "scifi" ,     video:"https://www.youtube.com/embed/CPTIgILtna8", resumer:""},
+    { titre : "intouchables",              titreImg : "intouchables",         annee:2011, genre: "comedie",    video:"https://www.youtube.com/embed/cXu2MhWYUuE", resumer:""},
+    { titre : "le patient anglais",        titreImg : "lepatientanglais",     annee:1996, genre: "dramatique", video:"https://www.youtube.com/embed/FguRZAv_LS4", resumer:""},
+    { titre : "les deux tours",            titreImg : "lesdeuxtours",         annee:2002, genre: "aventure",   video:"https://www.youtube.com/embed/c9blKqmyeV4", resumer:""},
+    { titre : "seven",                     titreImg : "seven",                annee:1995, genre: "thriller",   video:"https://www.youtube.com/embed/znmZoVkCjpI", resumer:""},
+    { titre : "shutter island",            titreImg : "shutterisland",        annee:2010, genre: "thriller",   video:"https://www.youtube.com/embed/inAFW2CluQ4", resumer:""},
+    { titre : "star wars empire",          titreImg : "starwarsempire",       annee:1980, genre: "scifi",      video:"https://www.youtube.com/embed/Z7B0vfamFTE", resumer:""},
+    { titre : "survive style 5",           titreImg : "survivestyle5",        annee:2004, genre: "comedie",    video:"https://www.youtube.com/embed/LEH7nDkiPEk", resumer:""},
+    { titre : "swiss army man",            titreImg : "swissarmyman",         annee:2016, genre: "comedie",    video:"https://www.youtube.com/embed/yrK1f4TsQfM", resumer:"Hank, un homme désespéré errant dans la nature, découvre un mystérieux cadavre. Ils vont tous les deux embarquer dans un voyage épique afin de retrouver leur foyer. Lorsque Hank réalise que ce corps abandonné est la clé de sa survie, le suicidaire d'autrefois est forcé de convaincre un cadavre que la vie vaut la peine d'être vécu. "},
+    { titre : "the fall",                  titreImg : "thefall",              annee:2006, genre: "dramatique", video:"https://www.youtube.com/embed/IwsYyRc9j4g", resumer:""},
+    { titre : "what we doint he shadows",  titreImg : "whatwedointheshadows", annee:2014, genre: "comedie",    video:"https://www.youtube.com/embed/IAZEWtyhpes", resumer:""},
+    { titre : "zoolander",                 titreImg : "zoolander",            annee:2001, genre: "comedie",    video:"https://www.youtube.com/embed/MaEeSJZYkpY", resumer:""},
+    // { titre : "", titreImg  : "", annee:20, genre: "" , video:"https://www.youtube.com/embed/", resumer:""},
+  	// { titre : "", titreImg  : "", annee:20, genre: "" , video:"https://www.youtube.com/embed/", resumer:""},
+    // { titre : "", titreImg  : "", annee:20, genre: "" , video:"https://www.youtube.com/embed/", resumer:""},
+    // { titre : "", titreImg  : "", annee:20, genre: "" , video:"https://www.youtube.com/embed/", resumer:""},
+ 	// { titre : "", titreImg  : "", annee:20, genre: "" , video:"https://www.youtube.com/embed/", resumer:""},
+    // { titre : "", titreImg  : "", annee:20, genre: "" , video:"https://www.youtube.com/embed/", resumer:""},
+    // { titre : "", titreImg  : "", annee:20, genre: "" , video:"https://www.youtube.com/embed/", resumer:""},
+  	// { titre : "", titreImg  : "", annee:20, genre: "" , video:"https://www.youtube.com/embed/", resumer:""},
+    // { titre : "", titreImg  : "", annee:20, genre: "" , video:"https://www.youtube.com/embed/", resumer:""},
+    // { titre : "", titreImg  : "", annee:20, genre: "" , video:"https://www.youtube.com/embed/", resumer:""},
    ];
 
 
@@ -129,7 +128,7 @@ var films = [
  //ecrire les nouveau film
  	for(i=0;i<films.length;i++){
  		if (films[i].genre == genre){
- 			moviesEcritureGenre += '<div class="movieAffiche col-md-2" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			moviesEcritureGenre += '<div class="movieAffiche col-xs-4 col-sm-3 col-md-2" value='+i+' data-toggle="modal" data-target="#modalFilm"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
  		}
  	}
  	moviesEcritureGenre = '<div class="tabMovies">' + moviesEcritureGenre + '</div>'
@@ -150,16 +149,16 @@ $("#all").click(function(){
 function allMovies(){
  //supprimer les anciens film
  $("#moviesJS").html("")
- moviesEcritureGenre = ""
- moviesEcritureGenreCacher = ""
+ var moviesEcritureGenre = ""
+ var moviesEcritureGenreCacher = ""
  var filmsMax = 0
  //ecrire les nouveau film
  	for(i=0;i<films.length;i++){
  			if(i < 12){
- 			moviesEcritureGenre += '<div class="movieAffiche col-md-2" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			moviesEcritureGenre += '<div class="movieAffiche col-xs-4 col-sm-3 col-md-2" value='+i+' data-toggle="modal" data-target="#modalFilm"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
  			}
  			else {
- 			moviesEcritureGenreCacher += '<div class="movieAffiche col-md-2"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			moviesEcritureGenreCacher += '<div class="movieAffiche col-xs-4 col-sm-3 col-md-2" value='+i+' data-toggle="modal" data-target="#modalFilm"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
  			}
 
  	}
@@ -183,10 +182,118 @@ allMovies()
 	popup($(this).attr('value'))
 })
 
+
+
 //fonction popup
 
 function popup(valeur){
-	var ecrirePopup = '<div id="titrePop">'+films[valeur].titre+'</div><div id="anneePop">'+films[valeur].annee+'</div><div id="genrePop">'+films[valeur].genre+'</div>'
-	$("#popupFilm").html(ecrirePopup)
-	$("#popupFilm").css("display","block")
+	var ecrirePopup = films[valeur].titre
+	//ecriture titre
+	$("#titreFilm").html(ecrirePopup)
+	//ecriture info
+	ecrirePopup = '<iframe class="embed-responsive-item"  src="'+films[valeur].video+'?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>'
+	$("#bandeAnnonceFilm").html(ecrirePopup)
+	ecrirePopup = '<img src="assets/images/' + films[valeur].titreImg + '-' + films[valeur].annee+ '-' + films[valeur].genre + '.jpg" alt="">'
+	$("#imgFilm").html(ecrirePopup)
+	ecrirePopup = films[valeur].annee
+	$("#anneeFilm").html(ecrirePopup)
+	ecrirePopup = films[valeur].genre
+	$("#genreFilm").html(ecrirePopup)
+	ecrirePopup = films[valeur].resumer
+	$("#resumerFilm").html(ecrirePopup)
+	
+
+
+	
+	stopVideoYT = setInterval(function(){ stopVideo() }, 200);
+	
+	
+
 }
+	
+function stopVideo(){
+	if($("#modalFilm").css("display")=="none"){
+		$("#bandeAnnonceFilm").html("")
+		clearInterval(stopVideoYT)
+
+	}}
+
+
+
+	
+
+
+var shopTabIndice = 0
+// shop movie
+$("#shopSuivant").click(function(){
+	shopMovies("suivant")
+	shopMoviesVideo(shopTabIndice)
+})
+
+$("#shopPrecedent").click(function(){
+	shopMovies("precedent")
+	shopMoviesVideo(shopTabIndice)
+})
+
+function shopMovies(valeur){
+ //supprimer les anciens film
+ $("shopMoviesHaut").html("")
+ $("shopMoviesBas").html("")
+var shopEcritureHaut = ""
+var shopEcritureBas = ""
+
+if(valeur=="suivant" && films.length >= shopTabIndice+8){
+ 	shopTabIndice+=8}
+ else if (valeur=="precedent" && shopTabIndice-8>=0 )
+ 	{shopTabIndice-=8}
+var shopNombreFilm = 0
+ //ecrire les nouveau film
+ 	for(i=shopTabIndice;shopNombreFilm<8;i++){
+ 			if(i>=films.length){break}
+ 			if(4 > shopNombreFilm){
+ 			shopEcritureHaut += '<div class="movieAfficheShop col-md-3" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			shopNombreFilm++
+ 			}
+ 			else if(8 > shopNombreFilm){
+ 			shopEcritureBas += '<div class="movieAfficheShop col-md-3" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			shopNombreFilm++
+ 			}
+
+ 	}
+
+ 	$("#shopMoviesHaut").html(shopEcritureHaut)
+ 	$("#shopMoviesBas").html(shopEcritureBas)
+
+ }
+  shopMovies()
+
+
+ $(".movieAfficheShop").click(function(){
+	shopMoviesVideo($(this).attr('value'))
+	
+})
+ function shopMoviesVideo(valeur){
+ 	$("#bandeAnnonceShop").html("")
+ 	var ecrireShop = '<iframe class="embed-responsive-item" src="'+films[valeur].video+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+ 	$("#bandeAnnonceShop").html(ecrireShop)
+ 	ecrireShop = films[valeur].titre
+	$("#titreShop").html(ecrireShop)
+ 	ecrireShop = films[valeur].annee
+	$("#anneeShop").html(ecrireShop)
+	ecrireShop = films[valeur].genre
+	$("#genreShop").html(ecrireShop)
+	ecrireShop = films[valeur].resumer
+	$("#resumerShop").html(ecrireShop)
+ }
+
+
+shopMoviesVideo(0)
+
+
+
+
+
+
+
+
+
