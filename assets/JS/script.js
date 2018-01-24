@@ -29,7 +29,6 @@ $(document).ready(function(){
 })
 
 // les variables
-var shopNombreFilm = 0
 var stopVideoYT
 //afficher plus de film boutton
 
@@ -213,10 +212,17 @@ function stopVideo(){
 	
 
 
-
+var shopTabIndice = 0
 // shop movie
 $("#shopSuivant").click(function(){
-	shopMovies("suivant")}
+	shopMovies("suivant")
+	shopMoviesVideo(shopTabIndice)
+})
+
+$("#shopPrecedent").click(function(){
+	shopMovies("precedent")
+	shopMoviesVideo(shopTabIndice)
+})
 
 function shopMovies(valeur){
  //supprimer les anciens film
@@ -224,22 +230,28 @@ function shopMovies(valeur){
  $("shopMoviesBas").html("")
 var shopEcritureHaut = ""
 var shopEcritureBas = ""
+
+if(valeur=="suivant" && films.length >= shopTabIndice+8){
+ 	shopTabIndice+=8}
+ else if (valeur=="precedent" && shopTabIndice-8>=0 )
+ 	{shopTabIndice-=8}
+var shopNombreFilm = 0
  //ecrire les nouveau film
- 	for(i=shopNombreFilm;i<films.length;i++){
- 			if(i < shopNombreFilm+4){
+ 	for(i=shopTabIndice;shopNombreFilm<8;i++){
+ 			if(i>=films.length){break}
+ 			if(4 > shopNombreFilm){
  			shopEcritureHaut += '<div class="movieAfficheShop col-md-3" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			shopNombreFilm++
  			}
- 			else if(i < shopNombreFilm+8){
+ 			else if(8 > shopNombreFilm){
  			shopEcritureBas += '<div class="movieAfficheShop col-md-3" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			shopNombreFilm++
  			}
 
  	}
 
  	$("#shopMoviesHaut").html(shopEcritureHaut)
  	$("#shopMoviesBas").html(shopEcritureBas)
- 	if(valeur=="suivant"){
- 	shopNombreFilm+=8}
- 	else{shopNombreFilm-=8}
 
  }
   shopMovies()
