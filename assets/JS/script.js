@@ -297,3 +297,29 @@ shopMoviesVideo(0)
 
 
 
+// random affiche footer
+
+
+function randomImg (){
+
+		var tabImg = []
+
+		for(i=0;tabImg.length<6;i++){
+			nombreRandom = Math.round(Math.random()*films.length)
+			for(i=0;i<tabImg.length;i++){
+				if(nombreRandom != tabImg[i]){tabImg.push(nombreRandom)}
+			}
+
+
+		}
+		var ecritureRandom = ""
+		for(i = 0; i < 6; i++) {
+			ecritureRandom+= '<img class="col-md-4" src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt="">'
+
+		}
+
+		$("#afficheFilmRandom").html(ecritureRandom)
+}
+
+
+randomImg()
