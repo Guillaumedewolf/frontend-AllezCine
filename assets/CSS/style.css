@@ -18,6 +18,12 @@ body {
   font-size: 40px;
   font-weight: bolder;
 }
+@media only screen and (max-width:1069px) {
+ a.navbar-brand #red #white {
+ font-size: 25px !important;
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
 
 /*nav*/
 
@@ -52,13 +58,16 @@ navbar-wrapper {
   background-color: red !important;
 }
 
-.navbar-invers .navbar-toggle {
-  border-color: transparent;
+button.navbar-toggle {
+  border-color: white !important;
+}
+.icon-bar {
+  background-color: white !important;
 }
 
 .open .dropdown-toggle {
-  color: #fff;
-  background-color: #555 !important;
+  color: white !important;
+  background-color: white !important;
 }
 
 .dropdown-menu li a {
@@ -76,6 +85,7 @@ navbar-wrapper {
   border-top-left-radius: 100px !important;
   border-bottom-left-radius: 100px !important;
   border: none !important;
+  width: 100px;
 }
 
 input.form-control::placeholder {
@@ -96,6 +106,19 @@ button#glyphicon {
 
 .glyphicon {
   color: white;
+}
+@media (min-width: 1069px) {
+  .navbar-toggle {
+    display: none !important;
+  }
+}
+@media only screen and (max-width:766px) {
+ #myNavbar {
+ background-color:black;
+
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
 }
 
 /*carousel 1*/
@@ -184,15 +207,26 @@ button#dramatique {
 }
 
 /*img movies*/
-
+#moviesJS {
+margin-right: -50px;
+  align-items: center !important;
+}
 
 .movieAffiche>img{
 	width: 150px;
 	height: 200px;
+
 }
+
 .movieAfficheShop>img{
 	width: 150px;
 	height: 200px;
+}
+@media (max-width: 150px) {
+  .movieAfficheShop {
+    width: auto;
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
 }
 
 /*Boutton Series*/
