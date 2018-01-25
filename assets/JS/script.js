@@ -128,7 +128,7 @@ var films = [
  //ecrire les nouveau film
  	for(i=0;i<films.length;i++){
  		if (films[i].genre == genre){
- 			moviesEcritureGenre += '<div class="movieAffiche col-xs-4 col-sm-3 col-md-2" value='+i+' data-toggle="modal" data-target="#modalFilm"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			moviesEcritureGenre += '<div class="movieAffiche col-xs-6 col-sm-3 col-md-2" value='+i+' data-toggle="modal" data-target="#modalFilm"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
  		}
  	}
  	moviesEcritureGenre = '<div class="tabMovies">' + moviesEcritureGenre + '</div>'
@@ -155,10 +155,10 @@ function allMovies(){
  //ecrire les nouveau film
  	for(i=0;i<films.length;i++){
  			if(i < 12){
- 			moviesEcritureGenre += '<div class="movieAffiche col-xs-4 col-sm-3 col-md-2" value='+i+' data-toggle="modal" data-target="#modalFilm"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			moviesEcritureGenre += '<div class="movieAffiche col-xs-6 col-sm-3 col-md-2" value='+i+' data-toggle="modal" data-target="#modalFilm"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
  			}
  			else {
- 			moviesEcritureGenreCacher += '<div class="movieAffiche col-xs-4 col-sm-3 col-md-2" value='+i+' data-toggle="modal" data-target="#modalFilm"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			moviesEcritureGenreCacher += '<div class="movieAffiche col-xs-6 col-sm-3 col-md-2" value='+i+' data-toggle="modal" data-target="#modalFilm"><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
  			}
 
  	}
@@ -201,16 +201,16 @@ function popup(valeur){
 	$("#genreFilm").html(ecrirePopup)
 	ecrirePopup = films[valeur].resumer
 	$("#resumerFilm").html(ecrirePopup)
-	
 
 
-	
+
+
 	stopVideoYT = setInterval(function(){ stopVideo() }, 200);
-	
-	
+
+
 
 }
-	
+
 function stopVideo(){
 	if($("#modalFilm").css("display")=="none"){
 		$("#bandeAnnonceFilm").html("")
@@ -220,7 +220,7 @@ function stopVideo(){
 
 
 
-	
+
 
 
 var shopTabIndice = 0
@@ -251,11 +251,11 @@ var shopNombreFilm = 0
  	for(i=shopTabIndice;shopNombreFilm<8;i++){
  			if(i>=films.length){break}
  			if(4 > shopNombreFilm){
- 			shopEcritureHaut += '<div class="movieAfficheShop col-md-3" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			shopEcritureHaut += '<div class="movieAfficheShop col-xs-6 col-sm-3 col-md-3" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
  			shopNombreFilm++
  			}
  			else if(8 > shopNombreFilm){
- 			shopEcritureBas += '<div class="movieAfficheShop col-md-3" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
+ 			shopEcritureBas += '<div class="movieAfficheShop col-xs-6 col-sm-3 col-md-3" value='+i+'><img src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt=""><div class ="movieTitre">'+films[i].titre+'</div><div class ="movieAnnée">'+films[i].annee+'</div></div>'
  			shopNombreFilm++
  			}
 
@@ -267,10 +267,10 @@ var shopNombreFilm = 0
  }
   shopMovies()
 
-
+// Video Shop
  $(".movieAfficheShop").click(function(){
 	shopMoviesVideo($(this).attr('value'))
-	
+
 })
  function shopMoviesVideo(valeur){
  	$("#bandeAnnonceShop").html("")
@@ -288,12 +288,3 @@ var shopNombreFilm = 0
 
 
 shopMoviesVideo(0)
-
-
-
-
-
-
-
-
-
