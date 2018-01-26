@@ -245,7 +245,13 @@ span#tel {
 }
 
 /*Carousel 2*/
-
+@media only screen and (max-width:766px) {
+  #imagesSlide {
+    width: 600px;
+    height: 350px;
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
 #imagesSlide {
   display: block;
   margin-top: 25px;
@@ -625,7 +631,7 @@ footer{
 	background-color:#0D0D0D;
 	color: white;
 	margin:auto;
-	
+
 }
 
 
@@ -644,7 +650,7 @@ footer{
 	display: inline-block;
 	padding: 3px;
 	padding-right:5px;
-	padding-left:5px; 
+	padding-left:5px;
 	margin: 1px;
 	margin-bottom: 5px;
 	background-color: #313232;
@@ -661,15 +667,15 @@ footer{
 #subscribeEmail,#subscribeButton{
 	height: 40px;
 	margin-bottom: 30px;
-	
+
 }
 #bouttonFormulaire{
-	background-color: red; 
+	background-color: red;
 	color: white;
 }
 #subscribeButton{
 	margin-left: 5px;
-	background-color: red; 
+	background-color: red;
 	color: white;
 }
 #subscribeEmail{
