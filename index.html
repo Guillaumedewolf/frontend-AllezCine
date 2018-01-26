@@ -4,16 +4,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="decription" content="">
-  <meta name="keywords" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<title>AllezCiné</title>
 	<link rel="stylesheet" href="assets/CSS/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link src="assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
- 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -101,29 +101,34 @@
 		</div>
 	</div>
 
-<!-- login*********************************************************************************************** -->
+	<!-- login*********************************************************************************************** -->
 	<div id="login">
 	</div>
-<!-- carousel 2 *********************************************************************************************-->
+	<!-- carousel 2 *********************************************************************************************-->
 
 	<div class="carousel slide" data-ride="carousel">
 	</div>
 
 	<div id="featuredMovies">
 		<h2>FEATURED MOVIES</h2>
-		<div class="btn-group" class="filtre" id="movies">
-			<button class="btn btn-inverse" id="all">All</button>
-			<button class="btn btn-inverse" id="comedie">Comédie</button>
-			<button class="btn btn-inverse" id="thriller">Thriller</button>
-			<button class="btn btn-inverse" id="scifi">Scifi</button>
-			<button class="btn btn-inverse" id="dramatique">Drame</button>
+		<div class="container">
+			<div class="btn-group" class="filtre" id="movies">
+				<button class="btn btn-inverse" id="all">All</button>
+				<button class="btn btn-inverse" id="comedie">Comédie</button>
+				<button class="btn btn-inverse" id="thriller">Thriller</button>
+				<button class="btn btn-inverse" id="scifi">Scifi</button>
+				<button class="btn btn-inverse" id="dramatique">Drame</button>
+			</div>
+			</div>
+			<div class="container">
+			<div class="row" id="moviesJS">
+				<!-- liste des films créer en JS -->
+			</div>
 		</div>
-		<div class="row" id="moviesJS">
-			<!-- liste des films créer en JS -->
-		</div>
-		<div class="plusMoins" id="plusMoinsSeries">
-			<button id="filmBoutton">PLUS DE FILM</button>
-		</div>
+			<div class="plusMoins" id="plusMoinsSeries">
+				<button class="plusMoins" id="filmBoutton">PLUS DE FILM</button>
+			</div>
+
 	</div>
 
 	<div id="featuredSeries">
@@ -262,13 +267,14 @@
 			</div>
 		</div>
 		<div class="plusMoins" id="plusMoinsSeries">
-			<button id="serieBoutton">PLUS DE SERIES</button>
+			<button class="plusMoins" id="serieBoutton">PLUS DE SERIES</button>
 		</div>
 	</div>
 
-<!-- shop *********************************************************************************-->
-	<div id="shop" class = "row">
-		<i id="shopSuivant" class="fa fa-arrow-right fa-2x" aria-hidden="true"></i><i id="shopPrecedent" class="fa fa-arrow-left fa-2x" aria-hidden="true"></i><h2>Movies Shop</h2>
+	<!-- shop *********************************************************************************-->
+	<div id="shop" class="row">
+		<i id="shopSuivant" class="fa fa-arrow-right fa-2x" aria-hidden="true"></i><i id="shopPrecedent" class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
+		<h2>Movies Shop</h2>
 		<div id="shopMovies" class="col-md-8">
 			<div id="shopMoviesHaut" class="col-md-12"></div>
 			<div id="shopMoviesBas" class="col-md-12"></div>
@@ -279,7 +285,7 @@
 		<div id="genreShop" class="col-md-4"></div>
 		<div id="resumerShop" class="col-md-4"></div>
 	</div>
-<!-- contact *********************************************************************************-->
+	<!-- contact *********************************************************************************-->
 
 	<div id="contact" class="container">
 		<h3 class="text">CONTACT US</h3>
@@ -313,31 +319,31 @@
 			</div>
 		</div>
 
-	<!--réseaux sociaux -->
-	<div id="blockSocial">
-		<div id="twitter">Twitter<i class="fa fa-twitter" aria-hidden="true"></i></div>
-		<div id="facebook">Facebook<i class="fa fa-facebook" aria-hidden="true"></i></div>
-		<div id="dribbble">dribble<i class="fa fa-dribbble" aria-hidden="true"></i></div>
-		<div id="google">google+<i class="fa fa-google-plus" aria-hidden="true"></i></div>
-	</div>
-	<!--popup info film-->
+		<!--réseaux sociaux -->
+		<div id="blockSocial">
+			<div id="twitter">Twitter<i class="fa fa-twitter" aria-hidden="true"></i></div>
+			<div id="facebook">Facebook<i class="fa fa-facebook" aria-hidden="true"></i></div>
+			<div id="dribbble">dribble<i class="fa fa-dribbble" aria-hidden="true"></i></div>
+			<div id="google">google+<i class="fa fa-google-plus" aria-hidden="true"></i></div>
+		</div>
+		<!--popup info film-->
 		<div class="modal fade" id="modalFilm" role="dialog">
-    		<div class="modal-dialog modal-lg">
-     			<div class="modal-content">
-        			<div class="modal-header">
-         	 			<button id="closePopup" type="button" class="close" data-dismiss="modal">&times;</button>
-         				<h4 class="modal-title" id="titreFilm">Titre</h4>
-        			</div>
-        			<div class="modal-body row">
-        				<p id="bandeAnnonceFilm" class="col-md-8 embed-responsive embed-responsive-16by9">vidéo</p>
-        				<p id="imgFilm" class="col-md-4">affiche du film</p>
-	          			<p id="anneeFilm" class="col-md-4">info film année</p>
-	          			<p id="genreFilm" class="col-md-4">info film genre</p>
-	          			<p id="resumerFilm" class="col-md-4">info film resumer</p>
-	       	 		</div>
-	     	 	</div>
-	    	</div>
-	  	</div>
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button id="closePopup" type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title" id="titreFilm">Titre</h4>
+					</div>
+					<div class="modal-body row">
+						<p id="bandeAnnonceFilm" class="col-md-8 embed-responsive embed-responsive-16by9">vidéo</p>
+						<p id="imgFilm" class="col-md-4">affiche du film</p>
+						<p id="anneeFilm" class="col-md-4">info film année</p>
+						<p id="genreFilm" class="col-md-4">info film genre</p>
+						<p id="resumerFilm" class="col-md-4">info film resumer</p>
+					</div>
+				</div>
+			</div>
+		</div>
 		<footer>
 
 			<div id="afficheFilmRandom" class="row">

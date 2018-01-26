@@ -18,11 +18,18 @@ body {
   font-size: 40px;
   font-weight: bolder;
 }
+
 @media only screen and (max-width:1069px) {
- a.navbar-brand #red #white {
- font-size: 25px !important;
+  a.navbar-brand #red #white {
+    font-size: 25px !important;
     /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
+}
+h2 {
+  border-left: 3px solid red;
+  height: 35px;
+  margin-left: 50px;
+  font-size: : 100px!important;
 }
 
 /*nav*/
@@ -61,6 +68,7 @@ navbar-wrapper {
 button.navbar-toggle {
   border-color: white !important;
 }
+
 .icon-bar {
   background-color: white !important;
 }
@@ -107,16 +115,11 @@ button#glyphicon {
 .glyphicon {
   color: white;
 }
-/* @media (min-width: 1069px) {
-  .navbar-toggle {
-    display: none !important;
-  }
-} */
+
+
 @media only screen and (max-width:766px) {
- #myNavbar {
- background-color:black;
-
-
+  #myNavbar {
+    background-color: black;
     /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
 }
@@ -170,7 +173,7 @@ ol.carousel-indicators li.active {
 
 /*Boutton Films*/
 
-.btn-inverse: hover, .btn par défaut: focus, .btn par défaut: actif, .btn-inverse.active, .Open .dropdown-toggle.btn-default {
+/* .btn-inverse: hover, .btn par défaut: focus, .btn par défaut: actif, .btn-inverse.active, .Open .dropdown-toggle.btn-default {
   color: # 333;
   background-color: #ebebeb !important;
   border-color: #adadad;
@@ -178,6 +181,25 @@ ol.carousel-indicators li.active {
 
 div#movies .btn-group .active {
   background-color: red !important;
+} */
+.filtre {
+  display: block;
+  margin: auto!important;
+
+}
+button {
+  background-color: #ebebeb;
+  border-color: #adadad;
+  color: # 333;
+  border-radius: none;
+  border: 5px;
+}
+
+button:active {
+  color: white !important;
+  background-color: red;
+  outline: none;
+  /* Pour enlever la bordure bleu */
 }
 
 button#all {
@@ -200,6 +222,17 @@ button#dramatique {
   margin-right: 5px;
 }
 
+button.plusMoins {
+  color: white;
+  background-color: red !important;
+  display: block;
+  margin: auto!important;
+  margin-top: 25px !important;
+  width: 150px;
+  height: 50px;
+  border: 5px;
+}
+
 /*toogle sur les film et serie (boutton plus/moins*/
 
 #moviesCacher, #seriesCacher {
@@ -207,21 +240,22 @@ button#dramatique {
 }
 
 /*img movies*/
+
 #moviesJS {
-margin-right: -50px;
+  margin-right: -50px;
   align-items: center !important;
 }
 
-.movieAffiche>img{
-	width: 150px;
-	height: 200px;
-
+.movieAffiche>img {
+  width: 150px;
+  height: 200px;
 }
 
-.movieAfficheShop>img{
-	width: 150px;
-	height: 200px;
+.movieAfficheShop>img {
+  width: 150px;
+  height: 200px;
 }
+
 @media (max-width: 150px) {
   .movieAfficheShop {
     width: auto;
@@ -305,24 +339,22 @@ button#action {
   margin-left: -20px
 }
 
-
 #google:hover {
-  margin-left: -20px}
-
-#imgFilm{
-	float: right;
-	margin-top: 7px;
-
-
+  margin-left: -20px
 }
 
-#imgFilm>img{
-	height: 300px;
+#imgFilm {
+  float: right;
+  margin-top: 7px;
+}
+
+#imgFilm>img {
+  height: 300px;
 }
 
 /*shop*/
 
-#shop>i{
-	float: right;
-	margin-right: 20px;
+#shop>i {
+  float: right;
+  margin-right: 20px;
 }
