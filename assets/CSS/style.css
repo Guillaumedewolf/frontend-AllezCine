@@ -20,15 +20,20 @@ body {
 }
 
 @media only screen and (max-width:1069px) {
-  a.navbar-brand #red #white {
-    font-size: 25px !important;
+  #red {
+    font-size: 25px;
     /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
+  #white {
+    font-size: 25px;
+  }
 }
+
 h2 {
   border-left: 3px solid red;
   height: 35px;
   margin-left: 50px;
+  margin-bottom: 50px!important;
   font-size: : 100px!important;
 }
 
@@ -116,7 +121,6 @@ button#glyphicon {
   color: white;
 }
 
-
 @media only screen and (max-width:766px) {
   #myNavbar {
     background-color: black;
@@ -130,6 +134,16 @@ button#glyphicon {
   background-color: transparent !important;
   margin-top: -6% !important;
   z-index: 2 !important;
+  height: auto
+}
+
+@media only screen and (max-width:766px) {
+  .jumbotron {
+    display: block;
+    margin: auto;
+    height: auto;
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
 }
 
 .item img {
@@ -167,9 +181,228 @@ ol.carousel-indicators li.active {
   transition: all 0.25s ease;
 }
 
+@media only screen and (max-width:1069px) {
+  ol.carousel-indicators li {
+    width: 20px;
+    height: 2px;
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+  ol.carousel-indicators li.active {
+    width: 20px;
+    height: 2px;
+  }
+}
+
+/* LOGIN */
+
+.login-register {
+  display: block;
+  border: 5px solid red;
+  background-color: red;
+  margin-top: -80px;
+  height: 50px;
+}
+
+@media only screen and (max-width:766px) {
+  .login-register {
+    margin-top: -60px;
+    height: 50px;
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
+
+#buttonLogin {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  border-radius: 0px !important;
+  margin-left: 25px;
+}
+
+#buttonRegister {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  border-radius: 0px !important;
+  vertical-align: middle!important;
+}
+
+@media only screen and (max-width:766px) {
+  #buttonLogin {
+    margin-left: 10px;
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
+
+span#tel {
+  font-size: 10px!important;
+  font-weight: lighter !important;
+  color: white!important;
+  display: inline-block;
+  margin-top: -10px!important;
+  vertical-align: text-top!important;
+  margin-left: 20px;
+}
+
 /*Carousel 2*/
 
-.carousel {}
+#imagesSlide {
+  display: block;
+  margin-top: 25px;
+  width: 1200px;
+  height: 350px;
+  border: 2px solid lightgrey;
+}
+
+#article17 {
+  overflow: hidden;
+}
+
+#article17 img {
+  width: 200px !important;
+  height: 250px !important;
+  padding-left: 25px;
+  margin-top: 50px;
+
+}
+
+#article17 ul {
+  display: table;
+  width: 2800px;
+  padding-left: 25%;
+  -webkit-animation: art17slide 20s ease 0s infinite;
+  -moz-animation: art17slide 20s ease 0s infinite;
+  -ms-animation: art17slide 20s ease 0s infinite;
+  -o-animation: art17slide 20s ease 0s infinite;
+  animation: art17slide 20s ease 0s infinite;
+}
+
+#article17 ul li {
+  display: table-cell;
+  width: 300px;
+  height: 300px;
+  list-style: none;
+}
+
+@-webkit-keyframes art17slide {
+  from, 11%, to {
+    margin-left: -300px;
+  }
+  15%, 26% {
+    margin-left: -600px;
+  }
+  30%, 41% {
+    margin-left: -900px;
+  }
+  45%, 56% {
+    margin-left: -1200px;
+  }
+  65%, 76% {
+    margin-left: -1500px;
+  }
+  80%, 91% {
+    margin-left: -1800px;
+  }
+  99.99% {
+    margin-left: -2100px;
+  }
+}
+
+@-moz-keyframes art17slide {
+  from, 11%, to {
+    margin-left: -300px;
+  }
+  15%, 26% {
+    margin-left: -600px;
+  }
+  30%, 41% {
+    margin-left: -900px;
+  }
+  45%, 56% {
+    margin-left: -1200px;
+  }
+  65%, 76% {
+    margin-left: -1500px;
+  }
+  80%, 91% {
+    margin-left: -1800px;
+  }
+  99.99% {
+    margin-left: -2100px;
+  }
+}
+
+@-ms-keyframes art17slide {
+  from, 11%, to {
+    margin-left: -300px;
+  }
+  15%, 26% {
+    margin-left: -600px;
+  }
+  30%, 41% {
+    margin-left: -900px;
+  }
+  45%, 56% {
+    margin-left: -1200px;
+  }
+  65%, 76% {
+    margin-left: -1500px;
+  }
+  80%, 91% {
+    margin-left: -1800px;
+  }
+  99.99% {
+    margin-left: -2100px;
+  }
+}
+
+@-o-keyframes art17slide {
+  from, 11%, to {
+    margin-left: -300px;
+  }
+  15%, 26% {
+    margin-left: -600px;
+  }
+  30%, 41% {
+    margin-left: -900px;
+  }
+  45%, 56% {
+    margin-left: -1200px;
+  }
+  65%, 76% {
+    margin-left: -1500px;
+  }
+  80%, 91% {
+    margin-left: -1800px;
+  }
+  99.99% {
+    margin-left: -2100px;
+  }
+}
+
+@keyframes art17slide {
+  from, 11%, to {
+    margin-left: -300px;
+  }
+  15%, 26% {
+    margin-left: -600px;
+  }
+  30%, 41% {
+    margin-left: -900px;
+  }
+  45%, 56% {
+    margin-left: -1200px;
+  }
+  65%, 76% {
+    margin-left: -1500px;
+  }
+  80%, 91% {
+    margin-left: -1800px;
+  }
+  99.99% {
+    margin-left: -2100px;
+  }
+}
 
 /*Boutton Films*/
 
@@ -182,24 +415,24 @@ ol.carousel-indicators li.active {
 div#movies .btn-group .active {
   background-color: red !important;
 } */
+
 .filtre {
   display: block;
   margin: auto!important;
-
 }
+
 button {
   background-color: #ebebeb;
   border-color: #adadad;
   color: # 333;
   border-radius: none;
   border: 5px;
+  margin-bottom: 25px !important;
 }
 
 button:active {
   color: white !important;
   background-color: red;
-  outline: none;
-  /* Pour enlever la bordure bleu */
 }
 
 button#all {
@@ -222,12 +455,32 @@ button#dramatique {
   margin-right: 5px;
 }
 
+@media only screen and (max-width:766px) {
+  button#all {
+    margin-right: 3px;
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+  button#comedie {
+    margin-right: 3px;
+  }
+  button#thriller {
+    margin-right: 3px;
+  }
+  button#scifi {
+    margin-right: 3px;
+  }
+  button#dramatique {
+    margin-right: 3px;
+  }
+}
+
 button.plusMoins {
   color: white;
   background-color: red !important;
   display: block;
   margin: auto!important;
   margin-top: 25px !important;
+  margin-bottom: 50px !important;
   width: 150px;
   height: 50px;
   border: 5px;
@@ -250,10 +503,10 @@ button.plusMoins {
   width: 150px;
   height: 200px;
 }
-.seriesAffiche>img{
-	width: 150px;
-	height: 200px;
 
+.seriesAffiche>img {
+  width: 150px;
+  height: 200px;
 }
 
 .movieAfficheShop>img {

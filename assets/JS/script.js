@@ -172,7 +172,7 @@ function allMovies(){
 
 allMovies()
 
-// series 
+// series
 
 var series = [
 { titre : "Sleepy Hollow", titreImg : "sleepyhollow", annee:2017, genre: "Horreur", video:"https://www.youtube.com/watch?v=1hFg9qS_u3w&feature=youtu.be", resumer:""},
@@ -400,7 +400,7 @@ function randomImg (){
 			var verification = 0
 			for(j=0;j<tabImg.length;j++){
 				if(nombreRandom == tabImg[j]){verification++}
-				
+
 			}
 
 				if(verification == 0){tabImg.push(nombreRandom)}

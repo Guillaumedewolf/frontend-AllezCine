@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="assets/CSS/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
- 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -102,11 +102,37 @@
 	</div>
 
 	<!-- login*********************************************************************************************** -->
-	<div id="login">
-	</div>
+	<section>
+		<div class="login-register left">
+			<span class=" glyphicon glyphicon-earphone" id="tel"> &lpar;&plus;000&rpar;009 455 4088</span>
+			<button type="button" id="buttonLogin" class="btn"><span>LOGIN</span></button>
+			<button type="button" id="buttonRegister" class="btn"><span>REGISTER</span></button>
+		</div>
+		</div>
+	</section>
+
 	<!-- carousel 2 *********************************************************************************************-->
 
-	<div class="carousel slide" data-ride="carousel">
+	<div class="container" id="imagesSlide">
+		<section id="article17">
+			<ul id="imgSlide" class="imagesSlide">
+				<li><img src="./assets/images/adeleblanc-sec-2010-aventure.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+				<li><img src="./assets/images/batmanmovie-2017-comedie.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+				<li><img src="./assets/images/ferdinand-2017-aventure.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+				<li><img src="./assets/images/geostorm-2017-scifi.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+				<li><img src="./assets/images/gonegirl-2014-thriller.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+				<li><img src="./assets/images/hostel-2005-thriller.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+				<li><img src="./assets/images/inception-2010-scifi.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+				<li><img src="./assets/images/interstellar-2014-dramatique.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+				<li><img src="./assets/images/intouchables-2011-comedie.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+				<li><img src="./assets/images/lestuches3-2018-comedie.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+				<li><img src="./assets/images/adeleblanc-sec-2010-aventure.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+				<li><img src="./assets/images/batmanmovie-2017-comedie.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+				<li><img src="./assets/images/ferdinand-2017-aventure.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+				<li><img src="./assets/images/geostorm-2017-scifi.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+				<li><img src="./assets/images/gonegirl-2014-thriller.jpg" alt="affiches films" width='150' height='200' style='height:200px;width:150px;' /></li>
+			</ul>
+		</section>
 	</div>
 
 	<div id="featuredMovies">
@@ -119,29 +145,33 @@
 				<button class="btn btn-inverse" id="scifi">Scifi</button>
 				<button class="btn btn-inverse" id="dramatique">Drame</button>
 			</div>
-			</div>
-			<div class="container">
+		</div>
+		<div class="container">
 			<div class="row" id="moviesJS">
 				<!-- liste des films créer en JS -->
 			</div>
-		<div class="plusMoins" id="plusMoinsFilm">
+			<div class="plusMoins" id="plusMoinsFilm">
 				<button class="plusMoins" id="filmBoutton">PLUS DE FILM</button>
 			</div>
-
+		</div>
 	</div>
 
 	<div id="featuredSeries">
 		<h2>FEATURED SERIES</h2>
-		<div class="btn-group" class="filtre" id="series">
-			<button class="btn btn-inverse" id="allSeries">All</button>
-			<button class="btn btn-inverse" id="comedieSeries">Comédie</button>
-			<button class="btn btn-inverse" id="actionSeries">Action</button>
+		<div class="container">
+			<div class="btn-group" class="filtre" id="series">
+				<button class="btn btn-inverse" id="allSeries">All</button>
+				<button class="btn btn-inverse" id="comedieSeries">Comédie</button>
+				<button class="btn btn-inverse" id="actionSeries">Action</button>
+			</div>
 		</div>
-		<div class="row" id="seriesJS">
-			<!-- liste des series créer en JS -->
-		</div>
-		<div class="plusMoins" id="plusMoinsSeries">
-			<button class="plusMoins" id="serieBoutton">PLUS DE SERIES</button>
+		<div class="container">
+			<div class="row" id="seriesJS">
+				<!-- liste des series créer en JS -->
+			</div>
+			<div class="plusMoins" id="plusMoinsSeries">
+				<button class="plusMoins" id="serieBoutton">PLUS DE SERIES</button>
+			</div>
 		</div>
 	</div>
 
@@ -192,44 +222,45 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<!--réseaux sociaux -->
-		<div id="blockSocial">
-			<div id="twitter">Twitter<i class="fa fa-twitter" aria-hidden="true"></i></div>
-			<div id="facebook">Facebook<i class="fa fa-facebook" aria-hidden="true"></i></div>
-			<div id="dribbble">dribble<i class="fa fa-dribbble" aria-hidden="true"></i></div>
-			<div id="google">google+<i class="fa fa-google-plus" aria-hidden="true"></i></div>
-		</div>
-		<!--popup info film-->
-		<div class="modal fade" id="modalFilm" role="dialog">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button id="closePopup" type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title" id="titreFilm">Titre</h4>
-					</div>
-					<div class="modal-body row">
-						<p id="bandeAnnonceFilm" class="col-md-8 embed-responsive embed-responsive-16by9">vidéo</p>
-						<p id="imgFilm" class="col-md-4">affiche du film</p>
-						<p id="anneeFilm" class="col-md-4">info film année</p>
-						<p id="genreFilm" class="col-md-4">info film genre</p>
-						<p id="resumerFilm" class="col-md-4">info film resumer</p>
-					</div>
+	<!--réseaux sociaux -->
+	<div id="blockSocial">
+		<div id="twitter">Twitter<i class="fa fa-twitter" aria-hidden="true"></i></div>
+		<div id="facebook">Facebook<i class="fa fa-facebook" aria-hidden="true"></i></div>
+		<div id="dribbble">dribble<i class="fa fa-dribbble" aria-hidden="true"></i></div>
+		<div id="google">google+<i class="fa fa-google-plus" aria-hidden="true"></i></div>
+	</div>
+	<!--popup info film-->
+	<div class="modal fade" id="modalFilm" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button id="closePopup" type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" id="titreFilm">Titre</h4>
+				</div>
+				<div class="modal-body row">
+					<p id="bandeAnnonceFilm" class="col-md-8 embed-responsive embed-responsive-16by9">vidéo</p>
+					<p id="imgFilm" class="col-md-4">affiche du film</p>
+					<p id="anneeFilm" class="col-md-4">info film année</p>
+					<p id="genreFilm" class="col-md-4">info film genre</p>
+					<p id="resumerFilm" class="col-md-4">info film resumer</p>
 				</div>
 			</div>
 		</div>
-		<footer>
+	</div>
+	<footer>
 
-			<div id="afficheFilmRandom" class="row">
-				<!-- ecriture en js -->
-			</div>
-		</footer>
+		<div id="afficheFilmRandom" class="row">
+			<!-- ecriture en js -->
+		</div>
+	</footer>
 
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="assets/JS/script.js"></script>
-		<script src="https://use.fontawesome.com/558d76d182.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/JS/script.js"></script>
+	<script src="https://use.fontawesome.com/558d76d182.js"></script>
 
 </body>
 
