@@ -412,7 +412,7 @@ function randomImg (){
 		console.log(tabImg)
 		var ecritureRandom = ""
 		for(i = 1; i < 7; i++) {
-			ecritureRandom+= '<img class="col-md-4" src="assets/images/' + films[tabImg[i]].titreImg + '-' + films[tabImg[i]].annee+ '-' + films[tabImg[i]].genre + '.jpg" alt="">'
+			ecritureRandom+= '<img src="assets/images/' + films[tabImg[i]].titreImg + '-' + films[tabImg[i]].annee+ '-' + films[tabImg[i]].genre + '.jpg" alt="">'
 
 		}
 
@@ -421,3 +421,21 @@ function randomImg (){
 
 
 randomImg()
+
+
+// lasted film
+
+
+function lastedFilm (){
+
+		var lastedFilm = ""
+		for(i=films.length-1;i>films.length-4;i--){
+			lastedFilm+= '<div class="row"><iframe height="70px" class="col-md-6" src="'+films[i].video+'" frameborder="0" allowfullscreen></iframe><div class="col-md-6">'+films[i].titre+'</div></div>'
+
+		}
+
+		$("#lastedFilm").html(lastedFilm)
+}
+
+
+lastedFilm()

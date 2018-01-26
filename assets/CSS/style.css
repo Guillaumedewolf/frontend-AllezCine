@@ -363,3 +363,98 @@ button#action {
   float: right;
   margin-right: 20px;
 }
+
+
+/*footer*/
+
+
+footer{
+	background-color:#0D0D0D;
+	color: white;
+	margin:auto;
+	
+}
+
+
+.titreFooter{
+	font-size: 20px;
+	border-bottom: 1px solid grey;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.contenuFooter{
+	color:grey;
+}
+
+.tagGenre{
+	display: inline-block;
+	padding: 3px;
+	padding-right:5px;
+	padding-left:5px; 
+	margin: 1px;
+	margin-bottom: 5px;
+	background-color: #313232;
+	color:white;
+}
+#afficheFilmRandom{
+	margin:auto;
+}
+#afficheFilmRandom>img{
+	height: 100px;
+	width: 70px;
+}
+
+#subscribeEmail,#subscribeButton{
+	height: 40px;
+	margin-bottom: 30px;
+	
+}
+#bouttonFormulaire{
+	background-color: red; 
+	color: white;
+}
+#subscribeButton{
+	margin-left: 5px;
+	background-color: red; 
+	color: white;
+}
+#subscribeEmail{
+	border-radius: 0px;
+	color: grey;
+
+}
+
+#subscribeButton:hover,#bouttonFormulaire:hover{
+	background-color: grey;
+}
+
+#subscribe>p{
+	text-align: center;
+	color:red;
+	font-size: 40px;
+	margin-top: 10px;
+
+}
+
+#ligneFooter{
+	border-top: 1px grey solid;
+	border-bottom: : 1px grey solid;
+	height: 20px;
+}
+#iconeFooter{
+	margin: auto;
+}
+#iconeFooter>i{
+	margin: 5px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid white;
+	padding-top: 10px;
+	box-shadow: 5px 10px;
+	margin-bottom: 40px;
+}
+
+#connect{
+	text-align: center;
+}
