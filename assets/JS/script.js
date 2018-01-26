@@ -295,19 +295,23 @@ shopMoviesVideo(0)
 
 function randomImg (){
 
-		var tabImg = [""]
+		var tabImg = ["random"]
 
-		for(i=0;tabImg.length<6;i++){
-			nombreRandom = Math.round(Math.random()*films.length)
-			for(i=0;i<tabImg.length;i++){
-				if(nombreRandom != tabImg[i]){tabImg.push(nombreRandom)}
+		for(i=0;tabImg.length<7;i++){
+			nombreRandom = Math.round(Math.random()*films.length -1)
+			if(nombreRandom === -1){nombreRandom=0}
+			var verification = 0
+			for(j=0;j<tabImg.length;j++){
+				if(nombreRandom == tabImg[j]){verification++}
+				
 			}
 
-
+				if(verification == 0){tabImg.push(nombreRandom)}
 		}
+		console.log(tabImg)
 		var ecritureRandom = ""
-		for(i = 0; i < 6; i++) {
-			ecritureRandom+= '<img class="col-md-4" src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt="">'
+		for(i = 1; i < 7; i++) {
+			ecritureRandom+= '<img class="col-md-4" src="assets/images/' + films[tabImg[i]].titreImg + '-' + films[tabImg[i]].annee+ '-' + films[tabImg[i]].genre + '.jpg" alt="">'
 
 		}
 
