@@ -107,11 +107,11 @@ button#glyphicon {
 .glyphicon {
   color: white;
 }
-@media (min-width: 1069px) {
+/* @media (min-width: 1069px) {
   .navbar-toggle {
     display: none !important;
   }
-}
+} */
 @media only screen and (max-width:766px) {
  #myNavbar {
  background-color:black;

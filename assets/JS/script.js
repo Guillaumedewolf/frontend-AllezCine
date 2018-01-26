@@ -295,7 +295,7 @@ shopMoviesVideo(0)
 
 function randomImg (){
 
-		var tabImg = []
+		var tabImg = [""]
 
 		for(i=0;tabImg.length<6;i++){
 			nombreRandom = Math.round(Math.random()*films.length)
