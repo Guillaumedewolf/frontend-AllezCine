@@ -175,20 +175,20 @@ allMovies()
 // series 
 
 var series = [
-{ titre : "Sleepy Hollow", titreImg : "sleepyhollow", annee:2017, genre: "Horreur", video:"https://www.youtube.com/watch?v=1hFg9qS_u3w&feature=youtu.be", resumer:""},
-{ titre : "Dr House", titreImg : "drhouse", annee:2005, genre: "Medical"},
-{ titre : "The Americans", titreImg : "theamericans", annee:2010, genre: "Thiller"},
-{ titre : "Salem", titreImg : "salem", annee:2011, genre: "Horeur"},
-{ titre : "Black Miror", titreImg : "blackmiror", annee:1996, genre: "Dramatique"},
-{ titre : "Mr Robot", titreImg : "mrrobot", annee:2002, genre: "Dramatique"},
-{ titre : "The 100", titreImg : "the100", annee:1995, genre: "Scifi"},
-{ titre : "Weeds", titreImg : "weeds", annee:2010, genre: "Thriller/Comedie"},
-{ titre : "Iron Fist", titreImg : "ironfist", annee:1980, genre: "Scifi"},
-{ titre : "Dr Who", titreImg : "drwho", annee:2004, genre: "Scifi"},
+{ titre : "Sleepy Hollow", titreImg : "sleepyhollow", annee:2017, genre: "horreur", video:"https://www.youtube.com/watch?v=1hFg9qS_u3w&feature=youtu.be", resumer:""},
+{ titre : "Dr House", titreImg : "drhouse", annee:2005, genre: "medical"},
+{ titre : "The Americans", titreImg : "theamericans", annee:2010, genre: "thriller"},
+{ titre : "Salem", titreImg : "salem", annee:2011, genre: "horeur"},
+{ titre : "Black Miror", titreImg : "blackmiror", annee:1996, genre: "dramatique"},
+{ titre : "Mr Robot", titreImg : "mrrobot", annee:2002, genre: "dramatique"},
+{ titre : "The 100", titreImg : "the100", annee:1995, genre: "scifi"},
+{ titre : "Weeds", titreImg : "weeds", annee:2010, genre: "comedie"},
+{ titre : "Iron Fist", titreImg : "ironfist", annee:1980, genre: "scifi"},
+{ titre : "Dr Who", titreImg : "drwho", annee:2004, genre: "scifi"},
 { titre : "Scorpion", titreImg : "scorpion", annee:2016, genre: "Avanture"},
-{ titre : "The Walking Dead", titreImg : "thewalkingdead", annee:2006, genre: "Horreur"},
-{ titre : "Blacklist", titreImg : "blacklist", annee:2014, genre: "Thiller"},
-{ titre : "Zombieland", titreImg : "zombieland", annee:2001, genre: "Comedie/Horreur"},
+{ titre : "The Walking Dead", titreImg : "thewalkingdead", annee:2006, genre: "horreur"},
+{ titre : "Blacklist", titreImg : "blacklist", annee:2014, genre: "thiller"},
+{ titre : "Zombieland", titreImg : "zombieland", annee:2001, genre: "comedie"},
 // { titre : "", titreImg : "", annee:20, genre: ""},
 // { titre : "", titreImg : "", annee:20, genre: ""},
 // { titre : "", titreImg : "", annee:20, genre: ""},
@@ -204,19 +204,23 @@ var series = [
 //afficher les series comedie
 
  $("#comedieSeries").click(function(){
- 	genreMovies("comedie")
+ 	genreSeries("comedie")
  })
 //afficher les series thriller
  $("#thrillerSeries").click(function(){
- 	genreMovies("thriller")
+ 	genreSeries("thriller")
  })
  //afficher les series sciences fiction
  $("#scifiSeries").click(function(){
- 	genreMovies("scifi")
+ 	genreSeries("scifi")
  })
- //afficher les series dramatique
- $("#dramatiqueSeries").click(function(){
- 	genreMovies("dramatique")
+ //afficher les series horreur
+ $("#horreurSeries").click(function(){
+ 	genreSeries("horreur")
+ })
+  //afficher les series medical
+ $("#medicalSeries").click(function(){
+ 	genreSeries("medical")
  })
 
  //fonction afficher les series du genre (-de 12 films)
@@ -230,8 +234,8 @@ var series = [
  			seriesEcritureGenre += '<div class="seriesAffiche col-xs-6 col-sm-3 col-md-2" value='+i+' data-toggle="modal" data-target="#modalSerie"><img src="assets/images/imgSerie/' + series[i].titreImg + '.jpeg" alt=""><div class ="serieTitre">'+series[i].titre+'</div><div class ="serieAnnée">'+series[i].annee+'</div></div>'
  		}
  	}
- 	seriesEcritureGenre = '<div class="tabMovies">' + seriesEcritureGenre + '</div>'
- 	$("#moviesJS").html(seriesEcritureGenre)
+ 	seriesEcritureGenre = '<div class="tabSeries">' + seriesEcritureGenre + '</div>'
+ 	$("#seriesJS").html(seriesEcritureGenre)
 
  }
 
