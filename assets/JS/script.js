@@ -172,7 +172,104 @@ function allMovies(){
 
 allMovies()
 
+// series 
 
+var series = [
+{ titre : "Sleepy Hollow", titreImg : "sleepyhollow", annee:2017, genre: "Horreur", video:"https://www.youtube.com/watch?v=1hFg9qS_u3w&feature=youtu.be", resumer:""},
+{ titre : "Dr House", titreImg : "drhouse", annee:2005, genre: "Medical"},
+{ titre : "The Americans", titreImg : "theamericans", annee:2010, genre: "Thiller"},
+{ titre : "Salem", titreImg : "salem", annee:2011, genre: "Horeur"},
+{ titre : "Black Miror", titreImg : "blackmiror", annee:1996, genre: "Dramatique"},
+{ titre : "Mr Robot", titreImg : "mrrobot", annee:2002, genre: "Dramatique"},
+{ titre : "The 100", titreImg : "the100", annee:1995, genre: "Scifi"},
+{ titre : "Weeds", titreImg : "weeds", annee:2010, genre: "Thriller/Comedie"},
+{ titre : "Iron Fist", titreImg : "ironfist", annee:1980, genre: "Scifi"},
+{ titre : "Dr Who", titreImg : "drwho", annee:2004, genre: "Scifi"},
+{ titre : "Scorpion", titreImg : "scorpion", annee:2016, genre: "Avanture"},
+{ titre : "The Walking Dead", titreImg : "thewalkingdead", annee:2006, genre: "Horreur"},
+{ titre : "Blacklist", titreImg : "blacklist", annee:2014, genre: "Thiller"},
+{ titre : "Zombieland", titreImg : "zombieland", annee:2001, genre: "Comedie/Horreur"},
+// { titre : "", titreImg : "", annee:20, genre: ""},
+// { titre : "", titreImg : "", annee:20, genre: ""},
+// { titre : "", titreImg : "", annee:20, genre: ""},
+// { titre : "", titreImg : "", annee:20, genre: ""},
+// { titre : "", titreImg : "", annee:20, genre: ""},
+// { titre : "", titreImg : "", annee:20, genre: ""},
+// { titre : "", titreImg : "", annee:20, genre: ""},
+// { titre : "", titreImg : "", annee:20, genre: ""},
+// { titre : "", titreImg : "", annee:20, genre: ""},
+// { titre : "", titreImg : "", annee:20, genre: ""},
+];
+
+//afficher les series comedie
+
+ $("#comedieSeries").click(function(){
+ 	genreMovies("comedie")
+ })
+//afficher les series thriller
+ $("#thrillerSeries").click(function(){
+ 	genreMovies("thriller")
+ })
+ //afficher les series sciences fiction
+ $("#scifiSeries").click(function(){
+ 	genreMovies("scifi")
+ })
+ //afficher les series dramatique
+ $("#dramatiqueSeries").click(function(){
+ 	genreMovies("dramatique")
+ })
+
+ //fonction afficher les series du genre (-de 12 films)
+ function genreSeries(genre){
+ //supprimer les anciennes series
+ $("#seriesJS").html("")
+ seriesEcritureGenre = ""
+ //ecrire les nouveau series
+ 	for(i=0;i<series.length;i++){
+ 		if (series[i].genre == genre){
+ 			seriesEcritureGenre += '<div class="seriesAffiche col-xs-6 col-sm-3 col-md-2" value='+i+' data-toggle="modal" data-target="#modalSerie"><img src="assets/images/imgSerie/' + series[i].titreImg + '.jpeg" alt=""><div class ="serieTitre">'+series[i].titre+'</div><div class ="serieAnnée">'+series[i].annee+'</div></div>'
+ 		}
+ 	}
+ 	seriesEcritureGenre = '<div class="tabMovies">' + seriesEcritureGenre + '</div>'
+ 	$("#moviesJS").html(seriesEcritureGenre)
+
+ }
+
+
+
+
+
+
+//afficher tous les films (+ de 12 film)
+$("#allSeries").click(function(){
+	allMovies()
+})
+
+function allSeries(){
+ //supprimer les anciens film
+ $("#seriesJS").html("")
+ var seriesEcritureGenre = ""
+ var seriesEcritureGenreCacher = ""
+ var seriesMax = 0
+ //ecrire les nouveau film
+ 	for(i=0;i<series.length;i++){
+ 			if(i < 12){
+ 			seriesEcritureGenre += '<div class="seriesAffiche col-xs-6 col-sm-3 col-md-2" value='+i+' data-toggle="modal" data-target="#modalSerie"><img src="assets/images/imgSerie/' + series[i].titreImg + '.jpeg" alt=""><div class ="serieTitre">'+series[i].titre+'</div><div class ="serieAnnée">'+series[i].annee+'</div></div>'
+ 			}
+ 			else {
+ 			seriesEcritureGenreCacher += '<div class="seriesAffiche col-xs-6 col-sm-3 col-md-2" value='+i+' data-toggle="modal" data-target="#modalSerie"><img src="assets/images/imgSerie/' + series[i].titreImg + '.jpeg" alt=""><div class ="serieTitre">'+series[i].titre+'</div><div class ="serieAnnée">'+series[i].annee+'</div></div>'
+ 			}
+
+ 	}
+ 	seriesEcritureGenre = '<div class="tabseries">' + seriesEcritureGenre + '</div><div class="tabseries" id="seriesCacher" >' + seriesEcritureGenreCacher + '</div>'
+ 	$("#seriesJS").html(seriesEcritureGenre)
+
+ }
+
+
+
+
+allSeries()
 
 
  // popup film
@@ -295,19 +392,23 @@ shopMoviesVideo(0)
 
 function randomImg (){
 
-		var tabImg = [""]
+		var tabImg = ["random"]
 
-		for(i=0;tabImg.length<6;i++){
-			nombreRandom = Math.round(Math.random()*films.length)
-			for(i=0;i<tabImg.length;i++){
-				if(nombreRandom != tabImg[i]){tabImg.push(nombreRandom)}
+		for(i=0;tabImg.length<7;i++){
+			nombreRandom = Math.round(Math.random()*films.length -1)
+			if(nombreRandom === -1){nombreRandom=0}
+			var verification = 0
+			for(j=0;j<tabImg.length;j++){
+				if(nombreRandom == tabImg[j]){verification++}
+				
 			}
 
-
+				if(verification == 0){tabImg.push(nombreRandom)}
 		}
+		console.log(tabImg)
 		var ecritureRandom = ""
-		for(i = 0; i < 6; i++) {
-			ecritureRandom+= '<img class="col-md-4" src="assets/images/' + films[i].titreImg + '-' + films[i].annee+ '-' + films[i].genre + '.jpg" alt="">'
+		for(i = 1; i < 7; i++) {
+			ecritureRandom+= '<img class="col-md-4" src="assets/images/' + films[tabImg[i]].titreImg + '-' + films[tabImg[i]].annee+ '-' + films[tabImg[i]].genre + '.jpg" alt="">'
 
 		}
 
