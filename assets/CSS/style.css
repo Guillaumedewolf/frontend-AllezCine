@@ -455,6 +455,27 @@ button#dramatique {
   margin-right: 5px;
 }
 
+button#all:hover{
+	background-color: red;
+	color:white;
+}
+button#comedie:hover{
+	background-color: red;
+	color:white;
+}
+button#thriller:hover{
+	background-color: red;
+	color:white;
+}
+button#scifi:hover{
+	background-color: red;
+	color:white;
+}
+button#dramatique:hover{
+	background-color: red;
+	color:white;
+}
+
 @media only screen and (max-width:766px) {
   button#all {
     margin-right: 3px;
@@ -485,7 +506,6 @@ button.plusMoins {
   height: 50px;
   border: 5px;
 }
-
 /*toogle sur les film et serie (boutton plus/moins*/
 
 #moviesCacher, #seriesCacher {
@@ -514,6 +534,7 @@ button.plusMoins {
   height: 200px;
 }
 
+
 @media (max-width: 150px) {
   .movieAfficheShop {
     width: auto;
@@ -535,8 +556,22 @@ button#comedieSeries {
   margin-right: 5px;
 }
 
-button#action {
+button#actionSeries {
   margin-right: 5px;
+}
+
+
+#allSeries:hover{
+	background-color: red;
+	color:white;
+}
+#comedieSeries:hover{
+	background-color: red;
+	color:white;
+}
+#actionSeries:hover{
+	background-color: red;
+	color:white;
 }
 
 /*css reseaux sociaux */
