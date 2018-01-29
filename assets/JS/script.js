@@ -46,10 +46,10 @@ var stopVideoYT
 $( "#filmBoutton" ).click(function() {
   $( "#moviesCacher" ).toggle();
   if($("#moviesCacher").css("display") == "none"){
-	$("#filmBoutton").html("PLUS DE FILM")
+	$("#filmBoutton").html("PLUS DE FILMS")
 	}
 	else{
-	$("#filmBoutton").html("MOINS DE FILM")
+	$("#filmBoutton").html("MOINS DE FILMS")
 	}
 });
 
@@ -106,18 +106,22 @@ var films = [
 
  $("#comedie").click(function(){
  	genreMovies("comedie")
+ 	$("#filmBoutton").css("display","none")
  })
 //afficher les film thriller
  $("#thriller").click(function(){
  	genreMovies("thriller")
+ 	$("#filmBoutton").css("display","none")
  })
  //afficher les film sciences fiction
  $("#scifi").click(function(){
  	genreMovies("scifi")
+ 	$("#filmBoutton").css("display","none")
  })
  //afficher les film dramatique
  $("#dramatique").click(function(){
  	genreMovies("dramatique")
+ 	$("#filmBoutton").css("display","none")
  })
 
  //fonction afficher les film du genre (-de 12 films)
@@ -144,6 +148,8 @@ var films = [
 //afficher tous les films (+ de 12 film)
 $("#all").click(function(){
 	allMovies()
+	$("#filmBoutton").css("display","block")
+	$("#filmBoutton").html("PLUS DE FILMS")
 })
 
 function allMovies(){
@@ -205,22 +211,29 @@ var series = [
 
  $("#comedieSeries").click(function(){
  	genreSeries("comedie")
+ 	$("#serieBoutton").css("display","none")
+
  })
 //afficher les series thriller
  $("#thrillerSeries").click(function(){
  	genreSeries("thriller")
+ 	$("#serieBoutton").css("display","none")
  })
  //afficher les series sciences fiction
  $("#scifiSeries").click(function(){
  	genreSeries("scifi")
+ 	$("#serieBoutton").css("display","none")
  })
  //afficher les series horreur
  $("#horreurSeries").click(function(){
  	genreSeries("horreur")
+ 	$("#serieBoutton").css("display","none")
  })
   //afficher les series medical
  $("#medicalSeries").click(function(){
  	genreSeries("medical")
+ 	$("#serieBoutton").css("display","none")
+
  })
 
  //fonction afficher les series du genre (-de 12 films)
@@ -246,7 +259,10 @@ var series = [
 
 //afficher tous les films (+ de 12 film)
 $("#allSeries").click(function(){
-	allMovies()
+	allSeries()
+ 	$("#serieBoutton").css("display","block")
+ 	$("#serieBoutton").html("PLUS DE SERIES")
+
 })
 
 function allSeries(){
@@ -409,7 +425,6 @@ function randomImg (){
 
 				if(verification == 0){tabImg.push(nombreRandom)}
 		}
-		console.log(tabImg)
 		var ecritureRandom = ""
 		for(i = 1; i < 7; i++) {
 			ecritureRandom+= '<img src="assets/images/' + films[tabImg[i]].titreImg + '-' + films[tabImg[i]].annee+ '-' + films[tabImg[i]].genre + '.jpg" alt="">'
@@ -439,3 +454,29 @@ function lastedFilm (){
 
 
 lastedFilm()
+
+
+
+// formulaire modal
+
+$("#bouttonFormulaire").click(function(){
+	var firstName = $("#firstName").val() 
+	var lastName = $("#lastName").val() 
+	var email = $("#email").val() 
+	var subject = $("#subject").val() 
+	var comments = $("#comments").val() 
+
+
+	$("#nameFormulaire").html(firstName +" "+ lastName)
+	$("#emailFormulaire").html(email)
+	$("#sujetFormulaire").html(subject)
+	$("#contenuFormulaire").html(comments)
+	
+
+	$("#modalformulaire").modal("show")
+
+
+
+
+}
+	)

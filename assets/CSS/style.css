@@ -13,6 +13,7 @@ body {
   font-weight: bolder;
 }
 
+html { overflow-x: hidden;}
 #white {
   color: white;
   font-size: 40px;
@@ -573,7 +574,7 @@ button.plusMoins {
   margin-right: -50px;
   align-items: center !important;
 }
-
+.movieAffiche:hover,.movieAfficheShop:hover{cursor: pointer;}
 .movieAffiche>img {
   width: 150px;
   height: 200px;
@@ -788,16 +789,23 @@ footer {
   margin: auto;
 }
 
-#iconeFooter>i {
-  margin: 5px;
-  width: 50px;
-  height: 50px;
-  border: 1px solid white;
-  padding-top: 10px;
-  box-shadow: 5px 10px;
-  margin-bottom: 40px;
+#iconeFooter>i{
+	margin: 5px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid white;
+	padding-top: 10px;
+	box-shadow: 5px 10px;
+	margin-bottom: 40px;
+	transition: 0.5s;
 }
 
-#connect {
-  text-align: center;
+#connect{
+	text-align: center;
+}
+
+#iconeFooter>i:hover{
+		box-shadow:10px 20px;
+		color: red;
+		border: solid 1px red;
 }
