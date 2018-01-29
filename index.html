@@ -49,7 +49,7 @@
 						<!-- bar de recherche -->
 						<form class="navbar-form navbar-left">
 							<div class="input-group">
-								<input type="text" id="form" class="form-control" placeholder="Search">
+								<input type="text" id="form" class="form-control" class="searchform" placeholder="Search">
 								<span class="input-group-btn">
                         <button type="button" id="glyphicon" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
 								</span>
@@ -76,25 +76,37 @@
 			<div class="carousel-inner">
 				<div class="item active">
 					<img src="./assets/images/1500x500.jpg" alt="Batman Movie" style="width:300%;">
+					<div class="carousel-caption">
+						<h3>LASTEST <span id="redJumbo">ON</span>LINE <span id="redJumbo">MO</span>VIES</h3>
+						<p>A secret government agency recruits some of the most dangerous incarcerated super-villains to form a defensive task force.</p>
+						<P><a href="https://www.youtube.com/watch?v=7kwjGGisNF8" target="_blank" class="btn" role="button" id="buttonTailer" class="buttonTailer">WATCH TRAILER</a></P>
+					</div>
 				</div>
 
 				<div class="item">
 					<img src="./assets/images/deadpool___2014_teaser_movie_banner_by_crustydog-d53hucm.jpg" alt="Inception" style="width:300%;">
+					<div class="carousel-caption">
+						<h3>LASTEST <span id="redJumbo">ON</span>LINE <span id="redJumbo">MO</span>VIES</h3>
+						<p>A fast-talking mercenary with a morbid sense of humor is subjected to a rogue experiment that leaves him with accelerated healing powers and a quest for revenge. </p>
+						<P><a href="https://www.youtube.com/watch?v=vq_2lquOPt8" target="_blank" class="btn" role="button" id="buttonTailer" class="buttonTailer">WATCH TRAILER</a></P>
+					</div>
 				</div>
 
 				<div class="item">
 					<img src="./assets/images/justice-league-2017.jpg" alt="Hostel" style="width:300%;">
 					<div class="carousel-caption">
-						<h3></h3>
-						<p></p>
+						<h3>LASTEST <span id="redJumbo">ON</span>LINE <span id="redJumbo">MO</span>VIES</h3>
+						<p> Fueled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne enlists the help of his newfound ally, Diana Prince, to face an even greater enemy.</p>
+						<P><a href="https://www.youtube.com/watch?v=cvUFoxU_Lq0" target="_blank" class="btn" role="button" id="buttonTailer" class="buttonTailer">WATCH TRAILER</a></P>
 					</div>
 				</div>
 
 				<div class="item">
 					<img src="./assets/images/let_the_right_one_in___2008_movie_banner_by_crustydog-d53tucl.jpg" alt="Intouchables" style="width:300%;">
 					<div class="carousel-caption">
-						<h3></h3>
-						<p></p>
+						<h3>LASTEST <span id="redJumbo">ON</span>LINE <span id="redJumbo">MO</span>VIES</h3>
+						<p>Oskar, an overlooked and bullied boy, finds love and revenge through Eli, a beautiful but peculiar girl.</p>
+						<P><a href="https://www.youtube.com/watch?v=ICp4g9p_rgo" target="_blank" class="btn" role="button" id="buttonTailer" class="buttonTailer">WATCH TRAILER</a></P>
 					</div>
 				</div>
 			</div>
@@ -104,7 +116,7 @@
 	<!-- login*********************************************************************************************** -->
 	<section>
 		<div class="login-register left">
-			<span class=" glyphicon glyphicon-earphone" id="tel"> &lpar;&plus;000&rpar;009 455 4088</span>
+			<span class=" glyphicon glyphicon-earphone" id="tel"> &lpar;&plus;000&rpar; 009 455 4088</span>
 			<button type="button" id="buttonLogin" class="btn"><span>LOGIN</span></button>
 			<button type="button" id="buttonRegister" class="btn"><span>REGISTER</span></button>
 		</div>
@@ -199,10 +211,10 @@
 			<div class="col-md-8">
 				<div class="row">
 					<div class="col-sm-6 form-group">
-						<input class="form-control" id="name" name="name" placeholder="FIRST NAME" type="text" required>
+						<input class="form-control" id="firstName" name="firstname" placeholder="FIRST NAME" type="text" required>
 					</div>
 					<div class="col-sm-6 form-group">
-						<input class="form-control" id="email" name="email" placeholder="LAST NAME" type="email" required>
+						<input class="form-control" id="lastName" name="lastname" placeholder="LAST NAME" type="text" required>
 					</div>
 				</div>
 				<div class="row">
@@ -210,7 +222,7 @@
 						<input class="form-control" id="email" name="email" placeholder="EMAIL" type="email" required>
 					</div>
 					<div class="col-sm-6 form-group">
-						<input class="form-control" id="email" name="email" placeholder="SUBJECT" type="email" required>
+						<input class="form-control" id="subject" name="subject" placeholder="SUBJECT" type="text" required>
 					</div>
 				</div>
 				<textarea class="form-control" id="comments" name="comments" placeholder="YOUR MESSAGE" rows="5"></textarea>
@@ -224,6 +236,88 @@
 		</div>
 
 	</div>
+	<!-- footer -->
+	<footer class="row">
+		<div id="subscribe" class="col-md-12 row">
+			<p>SUBSCRIBE TO US</p>
+			<div class="col-md-3"></div>
+			<input class="col-md-4" id="subscribeEmail" name="subscribe" placeholder="E-MAIL" type="email" required>
+			<button class="col-md-2" id="subscribeButton" type="submit">SUBSCRIBE</button>
+			<div class="col-md-3"></div>
+		</div>
+		<div class="row col-md-12">
+			<div class="col-md-1"></div>
+			<div id="releaseFooter" class="col-md-2">
+				<div class="titreFooter">RELEASE</div>
+				<div class="contenuFooter">
+					<p>2018</p>
+					<p>2017</p>
+					<p>2016</p>
+					<p>2015</p>
+					<p>2014</p>
+					<p>2013</p>
+				</div>
+			</div>
+			<div id="moviesFooter" class="col-md-2">
+				<div class="titreFooter">MOVIES</div>
+				<div class="contenuFooter">
+					<p>comedie</p>
+					<p>thriller</p>
+					<p>sciences-fiction</p>
+					<p>dramatique</p>
+					<p>aventure</p>
+					<p>horreur</p>
+				</div>
+
+			</div>
+			<div id="reviewFooter" class="col-md-2">
+				<div class="titreFooter">REVIEW MOVIES</div>
+				<div class="contenuFooter">
+					<div class="tagGenre">comedie</div>
+					<div class="tagGenre">thriller</div>
+					<div class="tagGenre">dramatique</div>
+					<div class="tagGenre">sciences-fiction</div>
+					<div class="tagGenre">aventure</div>
+					<div class="tagGenre">horreur</div>
+					<div class="tagGenre">aventure</div>
+					<div class="tagGenre">action</div>
+					<div class="tagGenre">romantique</div>
+					<div class="tagGenre">amour</div>
+					<div class="tagGenre">gloire</div>
+					<div class="tagGenre">beautée</div>
+					<div class="tagGenre">jean</div>
+					<div class="tagGenre">michel</div>
+					<div class="tagGenre">enRetard</div>
+				</div>
+			</div>
+			<div id="lastestFooter" class="col-md-2">
+				<div class="titreFooter">LASTEST MOVIES</div>
+				<div id="lastedFilm" class="contenuFooter row">
+					<!-- ecriture en js -->
+				</div>
+			</div>
+			<div id="allezCineFooter" class="col-md-2">
+				<div class="titreFooter"><span style="color:red;font-weight: bolder;">ALLEZ</span><span style="color:white;font-weight: bolder;">CINE!</span></div>
+				<div id="afficheFilmRandom" class="row">
+					<!-- ecriture en js -->
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+		<div class="col-md-12" id="ligneFooter"></div>
+		<div id="connect">
+			<p>CONNECT US</p>
+			<div id="iconeFooter">
+				<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+				<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+				<i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+				<i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
+				<i class="fa fa-google-plus fa-2x" aria-hidden="true"></i>
+			</div>
+		</div>
+
+
+	</footer>
 
 	<!--réseaux sociaux -->
 	<div id="blockSocial">
@@ -250,121 +344,33 @@
 			</div>
 		</div>
 	</div>
-	<footer>
-
-		<div id="afficheFilmRandom" class="row">
-			<!-- ecriture en js -->
-		</div>
-	</footer>
-
-		</div>
-		<!--réseaux sociaux -->
-		<div id="blockSocial">
-			<div id="twitter">Twitter<i class="fa fa-twitter" aria-hidden="true"></i></div>
-			<div id="facebook">Facebook<i class="fa fa-facebook" aria-hidden="true"></i></div>
-			<div id="dribbble">dribble<i class="fa fa-dribbble" aria-hidden="true"></i></div>
-			<div id="google">google+<i class="fa fa-google-plus" aria-hidden="true"></i></div>
-		</div>
-		<!--popup info film-->
-		<div class="modal fade" id="modalFilm" role="dialog">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button id="closePopup" type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title" id="titreFilm">Titre</h4>
-					</div>
-					<div class="modal-body row">
-						<p id="bandeAnnonceFilm" class="col-md-8 embed-responsive embed-responsive-16by9">vidéo</p>
-						<p id="imgFilm" class="col-md-4">affiche du film</p>
-						<p id="anneeFilm" class="col-md-4">info film année</p>
-						<p id="genreFilm" class="col-md-4">info film genre</p>
-						<p id="resumerFilm" class="col-md-4">info film resumer</p>
-					</div>
+	</div>
+	<!--réseaux sociaux -->
+	<div id="blockSocial">
+		<div id="twitter">Twitter<i class="fa fa-twitter" aria-hidden="true"></i></div>
+		<div id="facebook">Facebook<i class="fa fa-facebook" aria-hidden="true"></i></div>
+		<div id="dribbble">dribble<i class="fa fa-dribbble" aria-hidden="true"></i></div>
+		<div id="google">google+<i class="fa fa-google-plus" aria-hidden="true"></i></div>
+	</div>
+	<!--popup info film-->
+	<div class="modal fade" id="modalFilm" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button id="closePopup" type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" id="titreFilm">Titre</h4>
+				</div>
+				<div class="modal-body row">
+					<p id="bandeAnnonceFilm" class="col-md-8 embed-responsive embed-responsive-16by9">vidéo</p>
+					<p id="imgFilm" class="col-md-4">affiche du film</p>
+					<p id="anneeFilm" class="col-md-4">info film année</p>
+					<p id="genreFilm" class="col-md-4">info film genre</p>
+					<p id="resumerFilm" class="col-md-4">info film resumer</p>
 				</div>
 			</div>
 		</div>
-		<!-- footer -->
-		<footer class="row">
-			<div id="subscribe" class="col-md-12 row">
-				<p>SUBSCRIBE TO US</p>
-				<div class="col-md-3"></div>
-				<input class="col-md-4" id="subscribeEmail" name="subscribe" placeholder="E-MAIL" type="email" required>
-				<button class="col-md-2" id="subscribeButton" type="submit">SUBSCRIBE</button>
-				<div class="col-md-3"></div>
-			</div>
-			<div class="row col-md-12">
-				<div class="col-md-1"></div>
-				<div id="releaseFooter" class="col-md-2">
-					<div class="titreFooter">RELEASE</div>
-					<div class="contenuFooter">
-						<p>2018</p>
-						<p>2017</p>
-						<p>2016</p>
-						<p>2015</p>
-						<p>2014</p>
-						<p>2013</p>
-					</div>
-				</div>
-				<div id="moviesFooter" class="col-md-2">
-					<div class="titreFooter">MOVIES</div>
-					<div class="contenuFooter">
-						<p>comedie</p>
-						<p>thriller</p>
-						<p>sciences-fiction</p>
-						<p>dramatique</p>
-						<p>aventure</p>
-						<p>horreur</p>
-					</div>
+	</div>
 
-				</div>
-				<div id="reviewFooter" class="col-md-2">
-					<div class="titreFooter">REVIEW MOVIES</div>
-					<div class="contenuFooter">
-						<div class="tagGenre">comedie</div>
-						<div class="tagGenre">thriller</div>
-						<div class="tagGenre">dramatique</div>
-						<div class="tagGenre">sciences-fiction</div>
-						<div class="tagGenre">aventure</div>
-						<div class="tagGenre">horreur</div>
-						<div class="tagGenre">aventure</div>
-						<div class="tagGenre">action</div>
-						<div class="tagGenre">romantique</div>
-						<div class="tagGenre">amour</div>
-						<div class="tagGenre">gloire</div>
-						<div class="tagGenre">beautée</div>
-						<div class="tagGenre">jean</div>
-						<div class="tagGenre">michel</div>
-						<div class="tagGenre">enRetard</div>
-					</div>
-				</div>
-				<div id="lastestFooter" class="col-md-2">
-					<div class="titreFooter">LASTEST MOVIES</div>
-					<div id="lastedFilm" class="contenuFooter row">
-						<!-- ecriture en js -->
-					</div>
-				</div>
-				<div id="allezCineFooter" class="col-md-2">
-					<div class="titreFooter"><span style="color:red;font-weight: bolder;">ALLEZ</span><span style="color:white;font-weight: bolder;">CINE!</span></div>
-					<div id="afficheFilmRandom" class="row">
-						<!-- ecriture en js -->
-					</div>
-				</div>
-				<div class="col-md-1"></div>
-			</div>
-			<div class="col-md-12" id="ligneFooter"></div>
-			<div id="connect">
-					<p>CONNECT US</p>
-					<div id="iconeFooter">
-						<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
-						<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
-						<i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
-						<i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
-						<i class="fa fa-google-plus fa-2x" aria-hidden="true"></i>
-					</div>
-			</div>
-
-
-		</footer>
 
 
 

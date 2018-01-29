@@ -101,12 +101,12 @@ button.navbar-toggle {
   width: 100px;
 }
 
-input.form-control::placeholder {
-  color: white;
+input.searchform::placeholder {
+  color: white !important;
 }
 
-input.form-control {
-  color: white;
+input.searchform {
+  color: white !important;
 }
 
 button#glyphicon {
@@ -149,14 +149,13 @@ button#glyphicon {
 .item img {
   height: 800px;
   filter: brightness(50%);
+  -webkit-filter: brightness(50%);
+  -moz-filter: brightness(50%);
+  -o-filter: brightness(50%);
+  -ms-filter: brightness(50%);
 }
 
-@media (max-width: 600px) {
-  .carousel-caption {
-    display: none;
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
-  }
-}
+
 
 ol.carousel-indicators li {
   float: center;
@@ -191,6 +190,46 @@ ol.carousel-indicators li.active {
     width: 20px;
     height: 2px;
   }
+}
+
+.carousel-caption h3 {
+  text-align: center !important;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.carousel-caption p {
+  text-align: center !important;
+  margin-bottom: 75px;
+  font-size: 10px !important;
+  font-style: normal!important;
+  color: lightgrey;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none;
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
+
+a#buttonTailer {
+  text-align: center !important;
+  margin-bottom: 100px;
+  color: white;
+  background-color: red !important;
+  width: 140px;
+  height: 35px;
+  border: 5px solid red;
+  font-size: 15px !important;
+  border-radius: 0px !important;
+}
+
+#redJumbo {
+  color: red;
+  font-weight: bold;
+  font-size: 35px;
 }
 
 /* LOGIN */
@@ -245,13 +284,19 @@ span#tel {
 }
 
 /*Carousel 2*/
+
 @media only screen and (max-width:766px) {
   #imagesSlide {
     width: 600px;
     height: 350px;
     /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
+  li img #imagesSlide {
+    width: 50;
+    height: 100;
+  }
 }
+
 #imagesSlide {
   display: block;
   margin-top: 25px;
@@ -269,7 +314,6 @@ span#tel {
   height: 250px !important;
   padding-left: 25px;
   margin-top: 50px;
-
 }
 
 #article17 ul {
@@ -461,6 +505,31 @@ button#dramatique {
   margin-right: 5px;
 }
 
+button#all:hover {
+  background-color: red;
+  color: white;
+}
+
+button#comedie:hover {
+  background-color: red;
+  color: white;
+}
+
+button#thriller:hover {
+  background-color: red;
+  color: white;
+}
+
+button#scifi:hover {
+  background-color: red;
+  color: white;
+}
+
+button#dramatique:hover {
+  background-color: red;
+  color: white;
+}
+
 @media only screen and (max-width:766px) {
   button#all {
     margin-right: 3px;
@@ -541,8 +610,23 @@ button#comedieSeries {
   margin-right: 5px;
 }
 
-button#action {
+button#actionSeries {
   margin-right: 5px;
+}
+
+#allSeries:hover {
+  background-color: red;
+  color: white;
+}
+
+#comedieSeries:hover {
+  background-color: red;
+  color: white;
+}
+
+#actionSeries:hover {
+  background-color: red;
+  color: white;
 }
 
 /*css reseaux sociaux */
@@ -623,97 +707,97 @@ button#action {
   margin-right: 20px;
 }
 
-
 /*footer*/
 
-
-footer{
-	background-color:#0D0D0D;
-	color: white;
-	margin:auto;
-
+footer {
+  background-color: #0D0D0D;
+  color: white;
+  margin: auto;
 }
 
-
-.titreFooter{
-	font-size: 20px;
-	border-bottom: 1px solid grey;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
+.titreFooter {
+  font-size: 20px;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.contenuFooter{
-	color:grey;
+.contenuFooter {
+  color: grey;
 }
 
-.tagGenre{
-	display: inline-block;
-	padding: 3px;
-	padding-right:5px;
-	padding-left:5px;
-	margin: 1px;
-	margin-bottom: 5px;
-	background-color: #313232;
-	color:white;
-}
-#afficheFilmRandom{
-	margin:auto;
-}
-#afficheFilmRandom>img{
-	height: 100px;
-	width: 70px;
+.tagGenre {
+  display: inline-block;
+  padding: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin: 1px;
+  margin-bottom: 5px;
+  background-color: #313232;
+  color: white;
 }
 
-#subscribeEmail,#subscribeButton{
-	height: 40px;
-	margin-bottom: 30px;
-
-}
-#bouttonFormulaire{
-	background-color: red;
-	color: white;
-}
-#subscribeButton{
-	margin-left: 5px;
-	background-color: red;
-	color: white;
-}
-#subscribeEmail{
-	border-radius: 0px;
-	color: grey;
-
+#afficheFilmRandom {
+  margin: auto;
 }
 
-#subscribeButton:hover,#bouttonFormulaire:hover{
-	background-color: grey;
+#afficheFilmRandom>img {
+  height: 100px;
+  width: 70px;
 }
 
-#subscribe>p{
-	text-align: center;
-	color:red;
-	font-size: 40px;
-	margin-top: 10px;
-
+#subscribeEmail, #subscribeButton {
+  height: 40px;
+  margin-bottom: 30px;
 }
 
-#ligneFooter{
-	border-top: 1px grey solid;
-	border-bottom: : 1px grey solid;
-	height: 20px;
-}
-#iconeFooter{
-	margin: auto;
-}
-#iconeFooter>i{
-	margin: 5px;
-	width: 50px;
-	height: 50px;
-	border: 1px solid white;
-	padding-top: 10px;
-	box-shadow: 5px 10px;
-	margin-bottom: 40px;
+#bouttonFormulaire {
+  background-color: red;
+  color: white;
 }
 
-#connect{
-	text-align: center;
+#subscribeButton {
+  margin-left: 5px;
+  background-color: red;
+  color: white;
+}
+
+#subscribeEmail {
+  border-radius: 0px;
+  color: grey;
+}
+
+#subscribeButton:hover, #bouttonFormulaire:hover {
+  background-color: grey;
+}
+
+#subscribe>p {
+  text-align: center;
+  color: red;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+#ligneFooter {
+  border-top: 1px grey solid;
+  border-bottom: : 1px grey solid;
+  height: 20px;
+}
+
+#iconeFooter {
+  margin: auto;
+}
+
+#iconeFooter>i {
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  padding-top: 10px;
+  box-shadow: 5px 10px;
+  margin-bottom: 40px;
+}
+
+#connect {
+  text-align: center;
 }
