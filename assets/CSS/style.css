@@ -29,6 +29,15 @@ html { overflow-x: hidden;}
     font-size: 25px;
   }
 }
+@media (min-width: 756px) and (max-width: 978px){
+	 #red {
+    font-size: 1em;
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+  #white {
+    font-size:1em;
+  }
+}
 
 h2 {
   border-left: 3px solid red;
@@ -192,6 +201,14 @@ ol.carousel-indicators li.active {
     height: 2px;
   }
 }
+.carousel-caption{
+	margin-bottom: 2%;
+}
+/*@media (max-width: 950px) { 
+	.carousel-caption{
+	margin-bottom: 50px;
+} }
+*/
 
 .carousel-caption h3 {
   text-align: center !important;
@@ -208,26 +225,28 @@ ol.carousel-indicators li.active {
   text-transform: uppercase;
 }
 
-@media (max-width: 600px) {
+@media (max-width:920px) {
   .carousel-caption {
     display: none;
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    /* Hide the carousel text when the screen is less than 775 pixels wide */
   }
 }
 
-a#buttonTailer {
-  text-align: center !important;
+.buttonTrailer {
+  text-align: center;
   margin-bottom: 100px;
   color: white;
-  background-color: red !important;
+  background-color: red ;
   width: 140px;
   height: 35px;
   border: 5px solid red;
-  font-size: 15px !important;
-  border-radius: 0px !important;
+  font-size: 15px ;
+  border-radius: 0px ;
+  padding: 10px;
 }
+.buttonTrailer:hover{color:white;text-decoration: none;background-color: grey;border:grey 5px solid;}
 
-#redJumbo {
+.redJumbo {
   color: red;
   font-weight: bold;
   font-size: 35px;
