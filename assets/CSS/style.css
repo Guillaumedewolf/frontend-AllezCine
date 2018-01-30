@@ -13,29 +13,33 @@ body {
   font-weight: bolder;
 }
 
-html { overflow-x: hidden;}
+html {
+  overflow-x: hidden;
+}
+
 #white {
   color: white;
   font-size: 40px;
   font-weight: bolder;
 }
 
+/* resize the brand text when the screen is less than 1069 pixels wide */
+
 @media only screen and (max-width:1069px) {
   #red {
     font-size: 25px;
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
   #white {
     font-size: 25px;
   }
 }
-@media (min-width: 756px) and (max-width: 978px){
-	 #red {
+
+@media (min-width: 756px) and (max-width: 978px) {
+  #red {
     font-size: 1em;
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
   #white {
-    font-size:1em;
+    font-size: 1em;
   }
 }
 
@@ -47,7 +51,7 @@ h2 {
   font-size: : 100px!important;
 }
 
-/*nav*/
+/*navbar*/
 
 navbar-wrapper {
   top: 0;
@@ -131,14 +135,17 @@ button#glyphicon {
   color: white;
 }
 
+/* change the backgroud color of the navbar when the screen is less than 766 pixels wide */
+
 @media only screen and (max-width:766px) {
   #myNavbar {
     background-color: black;
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
 }
 
 /*carousel 1*/
+
+/* jumbotron */
 
 .jumbotron {
   background-color: transparent !important;
@@ -152,7 +159,6 @@ button#glyphicon {
     display: block;
     margin: auto;
     height: auto;
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
 }
 
@@ -164,8 +170,6 @@ button#glyphicon {
   -o-filter: brightness(50%);
   -ms-filter: brightness(50%);
 }
-
-
 
 ol.carousel-indicators li {
   float: center;
@@ -194,21 +198,16 @@ ol.carousel-indicators li.active {
   ol.carousel-indicators li {
     width: 20px;
     height: 2px;
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
   ol.carousel-indicators li.active {
     width: 20px;
     height: 2px;
   }
 }
-.carousel-caption{
-	margin-bottom: 7%;
+
+.carousel-caption {
+  margin-bottom: 7%;
 }
-/*@media (max-width: 950px) { 
-	.carousel-caption{
-	margin-bottom: 50px;
-} }
-*/
 
 .carousel-caption h3 {
   text-align: center !important;
@@ -225,10 +224,11 @@ ol.carousel-indicators li.active {
   text-transform: uppercase;
 }
 
+/* Hide the carousel caption text when the screen is less than 920 pixels wide */
+
 @media (max-width:920px) {
   .carousel-caption {
     display: none;
-    /* Hide the carousel text when the screen is less than 775 pixels wide */
   }
 }
 
@@ -236,15 +236,21 @@ ol.carousel-indicators li.active {
   text-align: center;
   margin-bottom: 100px;
   color: white;
-  background-color: red ;
+  background-color: red;
   width: 140px;
   height: 35px;
   border: 5px solid red;
-  font-size: 15px ;
-  border-radius: 0px ;
+  font-size: 15px;
+  border-radius: 0px;
   padding: 10px;
 }
-.buttonTrailer:hover{color:white;text-decoration: none;background-color: grey;border:grey 5px solid;}
+
+.buttonTrailer:hover {
+  color: white;
+  text-decoration: none;
+  background-color: grey;
+  border: grey 5px solid;
+}
 
 .redJumbo {
   color: red;
@@ -266,7 +272,6 @@ ol.carousel-indicators li.active {
   .login-register {
     margin-top: -60px;
     height: 50px;
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
 }
 
@@ -289,7 +294,6 @@ ol.carousel-indicators li.active {
 @media only screen and (max-width:766px) {
   #buttonLogin {
     margin-left: 10px;
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
 }
 
@@ -304,18 +308,6 @@ span#tel {
 }
 
 /*Carousel 2*/
-
-@media only screen and (max-width:766px) {
-  #imagesSlide {
-    width: 600px;
-    height: 350px;
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
-  }
-  li img #imagesSlide {
-    width: 50;
-    height: 100;
-  }
-}
 
 #imagesSlide {
   display: block;
@@ -474,17 +466,20 @@ span#tel {
   }
 }
 
-/*Boutton Films*/
+/* Hide the carousel 2 when the screen is less than 766 pixels wide */
 
-/* .btn-inverse: hover, .btn par défaut: focus, .btn par défaut: actif, .btn-inverse.active, .Open .dropdown-toggle.btn-default {
-  color: # 333;
-  background-color: #ebebeb !important;
-  border-color: #adadad;
+@media only screen and (max-width:766px) {
+  #imagesSlide {
+    width: 600px;
+    height: 350px;
+  }
+  li img #imagesSlide {
+    width: 50;
+    height: 100;
+  }
 }
 
-div#movies .btn-group .active {
-  background-color: red !important;
-} */
+/*Boutton Films*/
 
 .filtre {
   display: block;
@@ -553,7 +548,6 @@ button#dramatique:hover {
 @media only screen and (max-width:766px) {
   button#all {
     margin-right: 3px;
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
   button#comedie {
     margin-right: 3px;
@@ -581,7 +575,7 @@ button.plusMoins {
   border: 5px;
 }
 
-/*toogle sur les film et serie (boutton plus/moins*/
+/*toogle sur les film et serie (boutton plus/moins)*/
 
 #moviesCacher, #seriesCacher {
   display: none;
@@ -593,7 +587,11 @@ button.plusMoins {
   margin-right: -50px;
   align-items: center !important;
 }
-.movieAffiche:hover,.movieAfficheShop:hover{cursor: pointer;}
+
+.movieAffiche:hover, .movieAfficheShop:hover {
+  cursor: pointer;
+}
+
 .movieAffiche>img {
   width: 150px;
   height: 200px;
@@ -612,7 +610,6 @@ button.plusMoins {
 @media (max-width: 150px) {
   .movieAfficheShop {
     width: auto;
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
   }
 }
 
@@ -808,23 +805,23 @@ footer {
   margin: auto;
 }
 
-#iconeFooter>i{
-	margin: 5px;
-	width: 50px;
-	height: 50px;
-	border: 1px solid white;
-	padding-top: 10px;
-	box-shadow: 5px 10px;
-	margin-bottom: 40px;
-	transition: 0.5s;
+#iconeFooter>i {
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  padding-top: 10px;
+  box-shadow: 5px 10px;
+  margin-bottom: 40px;
+  transition: 0.5s;
 }
 
-#connect{
-	text-align: center;
+#connect {
+  text-align: center;
 }
 
-#iconeFooter>i:hover{
-		box-shadow:10px 20px;
-		color: red;
-		border: solid 1px red;
+#iconeFooter>i:hover {
+  box-shadow: 10px 20px;
+  color: red;
+  border: solid 1px red;
 }
