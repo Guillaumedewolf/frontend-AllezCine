@@ -1,0 +1,41 @@
+body {
+  /* background-color: lightgrey !important; */
+  /* background-image: url(./IMG/1a31becc-f6d7-4d10-a057-590ccb9e88b5.jpg); */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  /* filter: brightness(10%); */
+}
+
+.buttonSousMenu {
+  color: black !important;
+}
+
+.buttonSousMenu:active {
+  background-color: black !important;
+  color: white !important;
+  border-radius: 5px !important;
+}
+
+.buttonSousMenu :hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+a:focus {
+  background-color: black !important;
+  color: white !important;
+  border-radius: 5px !important;
+}
+
+a {
+  background-color: lightgrey !important;
+  color: black !important;
+}
+
+/* p.carousel-caption #soushome {
+  filter: brightness(50%);
+  -webkit-filter: brightness(50%);
+  -moz-filter: brightness(50%);
+  -o-filter: brightness(50%);
+  -ms-filter: brightness(50%);
+} */
