@@ -56,7 +56,10 @@ setTimeout(
 
 })
   }, 13000);
- 
+ //debloquage scroll;
+setTimeout(
+  function()
+  {$("body").css("overflow", "auto")},11920)
 // shop goodies
 
 
