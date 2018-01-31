@@ -32,5 +32,47 @@ setTimeout(
 })
   }, 13000);
  
+// shop goodies
+
+
+var fraisPort = 10
+var prixTotal = 0
+var goodies=[
+{nom:"film1",prix:10},
+{nom:"film2",prix:11},
+{nom:"film3",prix:12},
+{nom:"film4",prix:13},
+{nom:"film5",prix:14},
+{nom:"film6",prix:15}
+]
+
+$(".article").click(function(){
+	var info = $(this).attr('value')
+	ajoutPanier(info)
+
+})
+
+
+function ajoutPanier (info){
+
+	prixTotal+= goodies[info].prix
+
+	if(prixTotal <= 15){
+		fraisPort = 10
+	}
+	else if (prixTotal > 15 && prixTotal < 30){
+		fraisPort = 7
+
+	}
+
+	else{
+		fraisPort = 0
+	}
+
+	var prixAfficher = prixTotal + fraisPort
+	$("#prixTotal").html("Prix Total de vos achats "+prixAfficher + "€")
+	$("#fraisPort").html("frais de port "+fraisPort + "€")
+}
+
 
 
