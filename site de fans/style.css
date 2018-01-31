@@ -1,7 +1,7 @@
 body {
    margin: 0;
     padding: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: rgba(0, 0, 0, 0.3); */
   background-image: url(./IMG/1a31becc-f6d7-4d10-a057-590ccb9e88b5.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -90,10 +90,14 @@ a {
   margin-top: 20px;
   text-align: center;
 }
-#menu4 {
+#contact {
   background-color: rgba(255, 255, 255, 0.6);
   border: 3px solid white;
   border-radius: 20px;
   margin-top: 20px;
   text-align: center;
+}
+#contact {
+
+
 }
