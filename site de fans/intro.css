@@ -133,3 +133,35 @@
     from{z-index: 19998}
     to{z-index: -19998}
 }
+
+
+
+/*animation img jamesbond*/
+
+.img007{
+    margin-right: -90px;
+    transform: translateX(10000px);
+   
+}
+
+#premier0{animation: Animation007 3s ease-in forwards 11s;}
+#deuxieme0{animation: Animation007 3s ease-in forwards 11.5s;}
+#premier7{animation: Animation007 3s ease-in forwards 12s;
+margin-left: -10px;}
+
+#pistol007{animation: Animation007 3s ease-in forwards 12.5s, tir 0.5s linear 16s;
+    margin-left: -55px;
+}
+
+
+
+@keyframes Animation007{
+    from{transform: translateX(2000px);}
+    to{transform: translateX(0px);}
+}
+
+@keyframes tir {
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(-45deg);}
+    100%{transform: rotate(0deg);}
+}
