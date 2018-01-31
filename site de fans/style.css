@@ -1,4 +1,6 @@
 body {
+   margin: 0;
+    padding: 0;
   /* background-color: lightgrey !important; */
   /* background-image: url(./IMG/1a31becc-f6d7-4d10-a057-590ccb9e88b5.jpg); */
   background-attachment: fixed;
