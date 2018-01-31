@@ -1,6 +1,6 @@
 body {
-   margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
   /* background-color: rgba(0, 0, 0, 0.3); */
   background-image: url(./IMG/1a31becc-f6d7-4d10-a057-590ccb9e88b5.jpg);
   background-attachment: fixed;
@@ -40,21 +40,23 @@ a {
   margin-top: 20px;
   text-align: center;
 }
- #sousmenu1 {
-   background-color: rgba(255, 255, 255, 0.6);
-   border: 3px solid white;
-   border-radius: 20px;
-   margin-top: 20px;
-   text-align: center;
- }
 
- #sousmenu2 {
-   background-color: rgba(255, 255, 255, 0.6);
-   border: 3px solid white;
-   border-radius: 20px;
-   margin-top: 20px;
-   text-align: center;
- }
+#sousmenu1 {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 3px solid white;
+  border-radius: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#sousmenu2 {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 3px solid white;
+  border-radius: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
 #sousmenu3 {
   background-color: rgba(255, 255, 255, 0.6);
   border: 3px solid white;
@@ -62,6 +64,7 @@ a {
   margin-top: 20px;
   text-align: center;
 }
+
 #sousmenu4 {
   background-color: rgba(255, 255, 255, 0.6);
   border: 3px solid white;
@@ -69,6 +72,7 @@ a {
   margin-top: 20px;
   text-align: center;
 }
+
 #menu1 {
   background-color: rgba(255, 255, 255, 0.6);
   border: 3px solid white;
@@ -76,6 +80,12 @@ a {
   margin-top: 20px;
   text-align: center;
 }
+
+.well p  {
+
+  text-align: justify !important;
+}
+
 #menu2 {
   background-color: rgba(255, 255, 255, 0.6);
   border: 3px solid white;
@@ -83,6 +93,7 @@ a {
   margin-top: 20px;
   text-align: center;
 }
+
 #menu3 {
   background-color: rgba(255, 255, 255, 0.6);
   border: 3px solid white;
@@ -90,6 +101,7 @@ a {
   margin-top: 20px;
   text-align: center;
 }
+
 #contact {
   background-color: rgba(255, 255, 255, 0.6);
   border: 3px solid white;
@@ -97,7 +109,14 @@ a {
   margin-top: 20px;
   text-align: center;
 }
-#contact {
 
+#contact {}
 
+footer {
+  background-color: rgba(255, 255, 255, 1);
 }
+/* footer {
+  background-color: #0D0D0D;
+  color: white;
+  margin: auto;
+} */

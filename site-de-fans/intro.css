@@ -16,7 +16,7 @@
     height: 100%;
     min-height: 100%;
     animation:  blockAnimation 0.1s forwards 12.5s;
-   
+
 }
 #fondNoir{
     position: absolute;
@@ -48,10 +48,10 @@
     background:transparent;
     height: 9%;
     width: 5%;
-    border-radius: 50%; 
+    border-radius: 50%;
     top:50%;
     left:2%;
-    
+
 }
 
 #c1{background: white;
@@ -93,7 +93,7 @@
     0%{left:2%;
     }
     70% {
-        
+
         left:86%;
         top:50%;
         transform: scale(1);
@@ -104,7 +104,7 @@
         left:48%;
         top:30%;
         background:transparent;
-            
+
     }
 }
 
@@ -112,11 +112,11 @@
 @keyframes fondNoir {
     0%{background: black;
         opacity: 1
-        
+
         }
     100%{background: transparent;
         opacity: 0
-        } 
+        }
 }
 
 @keyframes img {
@@ -133,6 +133,11 @@
     to{z-index: -19998}
 }
 
+@media only screen and (max-width:1069px) {
+  #animationIntro {
+  display: none;
+  }
+}
 
 
 /*animation img jamesbond*/
@@ -140,7 +145,7 @@
 .img007{
     margin-right: -90px;
     transform: translateX(10000px);
-   
+
 }
 
 #premier0{animation: Animation007 3s ease-in forwards 11s;}
@@ -152,10 +157,55 @@ margin-left: -10px;}
     margin-left: -55px;
 }
 .tir{animation: Animation007 3s ease-in forwards 12.5s, tir 0.5s ease-in 16s;
-    
+
 }
 
 
+@media only screen and (max-width:1069px) {
+  #premier0 {
+    animation: Animation007 3s ease-in forwards 0.5s;
+  }
+  #deuxieme0 {
+    animation: Animation007 3s ease-in forwards 1s;
+  }
+  #premier7 {
+    animation: Animation007 3s ease-in forwards 1.5s;
+    margin-left: -10px;
+}
+
+  #pistol007{
+      margin-left: -55px;
+  }
+  .tir {
+    animation: Animation007 3s ease-in forwards 2.5s, tir 0.5s ease-in 6s;
+
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .img007 {
+    width: 13%;
+    margin-left: 65px;
+  }
+  #premier7 {
+    margin-left: 67px;
+  }
+  #pistol007 {
+    margin-left: 67px;
+  }
+  }
+  @media only screen and (max-width:400px) {
+    .img007 {
+      width: 13%;
+      margin-left: 70px;
+    }
+    #premier7 {
+      margin-left: 72px;
+    }
+    #pistol007 {
+      margin-left: 72px;
+    }
+    }
 
 
 @keyframes Animation007{
