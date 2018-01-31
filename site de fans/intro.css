@@ -43,7 +43,7 @@
 }
 
 .cercle-blanc{
-    z-index: 110000;
+    z-index: 1100000;
     position: absolute;
     background:transparent;
     height: 9%;
@@ -81,7 +81,6 @@
     left:74%;
     animation: cercleMove 1s linear 7s
 }
-
 
 
 @keyframes cercleMove{
@@ -149,9 +148,13 @@
 #premier7{animation: Animation007 3s ease-in forwards 12s;
 margin-left: -10px;}
 
-#pistol007{animation: Animation007 3s ease-in forwards 12.5s, tir 0.5s linear 16s;
+#pistol007{
     margin-left: -55px;
 }
+.tir{animation: Animation007 3s ease-in forwards 12.5s, tir 0.5s ease-in 16s;
+    
+}
+
 
 
 
