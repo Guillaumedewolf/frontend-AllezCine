@@ -56,6 +56,9 @@ setTimeout(
 
 })
   }, 13000);
+function scrollWin() {
+    window.scrollTo(0, 0);
+}
  //debloquage scroll;
 setTimeout(
   function()
@@ -103,3 +106,8 @@ function ajoutPanier (info){
 }
 
 
+scrollWin()
+
+if(document.body.offsetWidth < 1000){
+	$("body").css("overflow", "auto")
+}
