@@ -5,6 +5,7 @@ body {
   background-image: url(./IMG/1a31becc-f6d7-4d10-a057-590ccb9e88b5.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
+  overflow:hidden;
 }
 
 .buttonSousMenu {
@@ -110,13 +111,10 @@ a {
   text-align: center;
 }
 
-#contact {}
-
 footer {
   background-color: rgba(255, 255, 255, 1);
 }
-/* footer {
-  background-color: #0D0D0D;
-  color: white;
-  margin: auto;
-} */
+
+.article{
+  background-color:white;
+}
