@@ -1,32 +1,7 @@
-// formulaire modal
-
-$("#bouttonFormulaire").click(function(){
-	var firstName = $("#firstName").val()
-	var lastName = $("#lastName").val()
-	var email = $("#email").val()
-	var subject = $("#subject").val()
-	var comments = $("#comments").val()
-
-
-	$("#nameFormulaire").html(firstName +" "+ lastName)
-	$("#emailFormulaire").html(email)
-	$("#sujetFormulaire").html(subject)
-	$("#contenuFormulaire").html(comments)
-
-
-	$("#modalformulaire").modal("show")
-
-
-
-
-}
-	)
-
-
 setTimeout(
   function()
   {
-   $("#body").click(function rotate(){
+   $("body").click(function rotate(){
 	$("#pistol007").css("transform", "translate(0px)")
 	$("#pistol007").removeClass("tir")
 	var interval = setInterval(frame, 5)
@@ -59,10 +34,39 @@ setTimeout(
 function scrollWin() {
     window.scrollTo(0, 0);
 }
+
  //debloquage scroll;
 setTimeout(
   function()
   {$("body").css("overflow", "auto")},11920)
+
+
+
+// formulaire modal
+
+$("#bouttonFormulaire").click(function(){
+	var firstName = $("#firstName").val()
+	var lastName = $("#lastName").val()
+	var email = $("#email").val()
+	var subject = $("#subject").val()
+	var comments = $("#comments").val()
+
+
+	$("#nameFormulaire").html(firstName +" "+ lastName)
+	$("#emailFormulaire").html(email)
+	$("#sujetFormulaire").html(subject)
+	$("#contenuFormulaire").html(comments)
+
+
+	$("#modalformulaire").modal("show")
+
+
+
+
+}
+	)
+
+
 
 
 // shop goodies

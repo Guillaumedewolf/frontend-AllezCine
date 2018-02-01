@@ -158,7 +158,7 @@ margin-left: -10px;}
 }
 .tir{animation: Animation007 3s ease-in forwards 12.5s, tir 0.5s ease-in 16s;
 
-}
+} */
 
 
 @media only screen and (max-width:1069px) {
@@ -218,6 +218,3 @@ margin-left: -10px;}
     50%{transform: rotate(-45deg);}
     100%{transform: rotate(0deg);}
 }
-
-
-
