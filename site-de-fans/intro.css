@@ -1,184 +1,239 @@
-
-
-.gunbarrel-bg{position: absolute;
-     width: 100%;
-    height: auto;
-    z-index: 19999;
-    animation: img 4s forwards 10.8s;
-    opacity: 0
-
-}
-#animationIntro{
-    display: block;
-    z-index: 19998;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-    animation:  blockAnimation 0.1s forwards 12.5s;
-
-}
-#fondNoir{
-    position: absolute;
-     z-index:19998;
-     background-color:black;
-     width: 100%;
-    height: 100%;
-    min-height: 30%;
-    animation: fondNoir 2s linear forwards 10.7s;
-}
-#fondNoir2{
-    position: absolute;
-     background-color:black;
-     width: 100%;
-    height: 28%;
-    min-height: 28%;
-    top:72%;
-    animation: fondNoir 0.1s linear forwards 11.92s;
-    vertical-align: middle;
-    text-align: center;
-    color: green;
-    z-index: 19998;
-
+.gunbarrel-bg {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 19999;
+  animation: img 4s forwards 10.5s;
+  opacity: 0
 }
 
-.cercle-blanc{
-    z-index: 1100000;
-    position: absolute;
-    background:transparent;
-    height: 9%;
-    width: 5%;
-    border-radius: 50%;
-    top:50%;
-    left:2%;
-
+#animationIntro {
+  display: block;
+  z-index: 19998;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  animation: blockAnimation 0.1s forwards 12.5s;
 }
 
-#c1{background: white;
-    animation: cerclePrincipal 10s linear forwards 1s;
-}
-#c2{
-    left:14%;
-    animation: cercleMove 1s linear 2s
-}
-#c3{
-    left:26%;
-    animation: cercleMove 1s linear 3s
-}
-#c4{
-    left:38%;
-    animation: cercleMove 1s linear 4s
-}
-#c5{
-    left:50%;
-    animation: cercleMove 1s linear 5s
-}
-#c6{
-    left:62%;
-    animation: cercleMove 1s linear 6s
-}
-#c7{
-    left:74%;
-    animation: cercleMove 1s linear 7s
+#fondNoir {
+  position: absolute;
+  z-index: 19998;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  min-height: 30%;
+  animation: fondNoir 2s linear forwards 10.7s;
 }
 
-
-@keyframes cercleMove{
-   0% { background: white; }
-   99%{background: white}
-    100% { background: transparent; }
+#fondNoir2 {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 28%;
+  min-height: 28%;
+  top: 72%;
+  animation: fondNoir 0.1s linear forwards 11.92s;
+  vertical-align: middle;
+  text-align: center;
+  color: green;
+  z-index: 19998;
 }
 
-@keyframes cerclePrincipal{
-    0%{left:2%;
-    }
-    70% {
-
-        left:86%;
-        top:50%;
-        transform: scale(1);
-        background: white;
-    }
-    99%{background: white;}
-    100%{transform: scale(7);
-        left:48%;
-        top:30%;
-        background:transparent;
-
-    }
+.cercle-blanc {
+  z-index: 1100000;
+  position: absolute;
+  background: transparent;
+  height: 9%;
+  width: 5%;
+  border-radius: 50%;
+  top: 50%;
+  left: 2%;
 }
 
+#c1 {
+  background: white;
+  animation: cerclePrincipal 10s linear forwards 1s;
+}
+
+#c2 {
+  left: 14%;
+  animation: cercleMove 1s linear 2s
+}
+
+#c3 {
+  left: 26%;
+  animation: cercleMove 1s linear 3s
+}
+
+#c4 {
+  left: 38%;
+  animation: cercleMove 1s linear 4s
+}
+
+#c5 {
+  left: 50%;
+  animation: cercleMove 1s linear 5s
+}
+
+#c6 {
+  left: 62%;
+  animation: cercleMove 1s linear 6s
+}
+
+#c7 {
+  left: 74%;
+  animation: cercleMove 1s linear 7s
+}
+
+@keyframes cercleMove {
+  0% {
+    background: white;
+  }
+  99% {
+    background: white
+  }
+  100% {
+    background: transparent;
+  }
+}
+
+@keyframes cerclePrincipal {
+  0% {
+    left: 2%;
+  }
+  70% {
+    left: 86%;
+    top: 50%;
+    transform: scale(1);
+    background: white;
+  }
+  99% {
+    background: white;
+  }
+  100% {
+    transform: scale(7);
+    left: 48%;
+    top: 30%;
+    background: transparent;
+  }
+}
 
 @keyframes fondNoir {
-    0%{background: black;
-        opacity: 1
-
-        }
-    100%{background: transparent;
-        opacity: 0
-        }
+  0% {
+    background: black;
+    opacity: 1
+  }
+  100% {
+    background: transparent;
+    opacity: 0
+  }
 }
 
 @keyframes img {
-    0%{opacity: 0}
-    25%{opacity: 1;
-        transform:scale(1);}
-    99%{transform: scale(7);
-        opacity: 1}
-    100%{opacity: 0}
+  0% {
+    opacity: 0
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  99% {
+    transform: scale(7);
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
 }
 
 @keyframes blockAnimation {
-    from{z-index: 19998}
-    to{z-index: -19998}
+  from {
+    z-index: 19998
+  }
+  to {
+    z-index: -19998
+  }
 }
 
 @media only screen and (max-width:1069px) {
   #animationIntro {
-  display: none;
+    display: none;
+  }
+  #fondNoir {
+    display: none;
+  }
+  #fondNoir2 {
+    display: none;
+  }
+  #c1 {
+    display: none;
+  }
+  #c2 {
+    display: none;
+  }
+  #c3 {
+    display: none;
+  }
+  #c4 {
+    display: none;
+  }
+  #c5 {
+    display: none;
+  }
+  #c6 {
+    display: none;
+  }
+  #c7 {
+    display: none;
   }
 }
-
 
 /*animation img jamesbond*/
 
-.img007{
-    margin-right: -90px;
-    transform: translateX(10000px);
-
+.img007 {
+  margin-right: -90px;
+  transform: translateX(10000px);
 }
 
-#premier0{animation: Animation007 3s ease-in forwards 11s;}
-#deuxieme0{animation: Animation007 3s ease-in forwards 11.5s;}
-#premier7{animation: Animation007 3s ease-in forwards 12s;
-margin-left: -10px;}
-
-#pistol007{
-    margin-left: -55px;
+#premier0 {
+  animation: Animation007 3s ease-in forwards 11s;
 }
-.tir{animation: Animation007 3s ease-in forwards 12.5s, tir 0.5s ease-in 16s;
 
-} */
+#deuxieme0 {
+  animation: Animation007 3s ease-in forwards 11.5s;
+}
 
+#premier7 {
+  animation: Animation007 3s ease-in forwards 12s;
+  margin-left: -10px;
+}
+
+#pistol007 {
+  margin-left: -55px;
+}
+
+.tir {
+  animation: Animation007 3s ease-in forwards 12.5s, tir 0.5s ease-in 16s;
+}
 
 @media only screen and (max-width:1069px) {
   #premier0 {
-    animation: Animation007 3s ease-in forwards 0.5s;
+    animation: Animation007 3s ease-in forwards -1s;
   }
   #deuxieme0 {
-    animation: Animation007 3s ease-in forwards 1s;
+    animation: Animation007 3s ease-in forwards -0.5s;
   }
   #premier7 {
-    animation: Animation007 3s ease-in forwards 1.5s;
+    animation: Animation007 3s ease-in forwards 0s;
     margin-left: -10px;
-}
-
-  #pistol007{
-      margin-left: -55px;
+  }
+  #pistol007 {
+    margin-left: -55px;
   }
   .tir {
-    animation: Animation007 3s ease-in forwards 2.5s, tir 0.5s ease-in 6s;
-
+    animation: Animation007 3s ease-in forwards 0.5s, tir 0.5s ease-in 3.5s;
   }
 }
 
@@ -191,30 +246,40 @@ margin-left: -10px;}
     margin-left: 67px;
   }
   #pistol007 {
-    margin-left: 67px;
+    margin-left: 65px;
   }
+}
+
+@media only screen and (max-width:400px) {
+  .img007 {
+    width: 13%;
+    margin-left: 70px;
   }
-  @media only screen and (max-width:400px) {
-    .img007 {
-      width: 13%;
-      margin-left: 70px;
-    }
-    #premier7 {
-      margin-left: 72px;
-    }
-    #pistol007 {
-      margin-left: 72px;
-    }
-    }
+  #premier7 {
+    margin-left: 72px;
+  }
+  #pistol007 {
+    margin-left: 72px;
+  }
+}
 
-
-@keyframes Animation007{
-    from{transform: translateX(2000px);}
-    to{transform: translateX(0px);}
+@keyframes Animation007 {
+  from {
+    transform: translateX(2000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
 }
 
 @keyframes tir {
-    0%{transform: rotate(0deg);}
-    50%{transform: rotate(-45deg);}
-    100%{transform: rotate(0deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

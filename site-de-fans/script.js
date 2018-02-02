@@ -113,6 +113,6 @@ function ajoutPanier (info){
 
 scrollWin()
 
-if(document.body.offsetWidth < 1000){
+if(document.body.offsetWidth < 1069){
 	$("body").css("overflow", "auto")
 }
