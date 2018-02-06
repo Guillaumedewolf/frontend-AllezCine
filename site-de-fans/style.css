@@ -5,8 +5,8 @@ body {
   background-image: url(./IMG/1a31becc-f6d7-4d10-a057-590ccb9e88b5.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  overflow:hidden;
-  cursor: url("IMG/804741413d7fe0e515b19a7ffc7b3027.png"), pointer;
+  overflow: hidden;
+  cursor: crosshair;
 }
 
 .buttonSousMenu {
@@ -40,10 +40,15 @@ a {
   height: 50px;
   margin-top: 5px;
 }
+
 .daniel {
   width: 30%;
   height: 30%;
-  border-radius: 50px
+  border-radius: 50px;
+  float: right;
+}
+.imgfilm {
+    border-radius: 50px;
 }
 
 #soushome {
@@ -60,6 +65,7 @@ a {
   border-radius: 20px;
   margin-top: 20px;
   text-align: center;
+  margin-right: -25px !important;
 }
 
 #sousmenu2 {
@@ -94,9 +100,8 @@ a {
   text-align: center;
 }
 
-.well p  {
-
-  text-align: justify !important;
+.well p {
+  text-align: center !important;
 }
 
 #menu2 {
@@ -118,6 +123,7 @@ a {
   text-align: center;
   margin-right: -25px !important;
 }
+
 .navbar-inverse {
   color: white!important;
 }
@@ -134,14 +140,14 @@ footer {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.article{
-    background-color: rgba(255, 255, 255, 1);
-    /* width: auto !important;
+.article {
+  background-color: rgba(255, 255, 255, 1);
+  /* width: auto !important;
     height: auto !important; */
-    display: block;
-    align-items: center;
-
+  display: block;
+  align-items: center;
 }
+
 .container #goodies {
   display: block;
   margin: auto;

@@ -233,7 +233,7 @@
     margin-left: -55px;
   }
   .tir {
-    animation: Animation007 3s ease-in forwards 0.5s, tir 0.5s ease-in 3.5s;
+    animation: Animation007 3s ease-in forwards 1s, tir 0.5s ease-in 3.5s;
   }
 }
 
@@ -248,6 +248,9 @@
   #pistol007 {
     margin-left: 65px;
   }
+  .tir {
+    animation: Animation007 3s ease-in forwards 1s, tir 0.5s ease-in 3.5s;
+  }
 }
 
 @media only screen and (max-width:400px) {
@@ -260,6 +263,9 @@
   }
   #pistol007 {
     margin-left: 72px;
+  }
+  .tir {
+    animation: Animation007 3s ease-in forwards 1s, tir 0.5s ease-in 3.5s;
   }
 }
 
