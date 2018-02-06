@@ -1,3 +1,17 @@
+var sound = document.createElement('audio')
+sound.id = 'audio'
+sound.src = './IMG/Essai coups de feu-[AudioTrimmer.com].mp3'
+sound.type = 'audio/mp3'
+document.body.appendChild(sound)
+
+function playAudio() {
+  document.getElementById('audio').play();
+  var monElementAudio = document.getElementById('audio');
+  monElementAudio.volume = 0.3;
+}
+
+setTimeout("playAudio()", 16000);
+
 setTimeout(
   function()
   {

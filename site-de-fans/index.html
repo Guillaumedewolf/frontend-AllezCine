@@ -30,12 +30,16 @@
     <img src="IMG/gunbarrel_copy_mini.png" class="gunbarrel-bg" alt="">
     <div id="fondNoir2"></div>
   </div>
+
   <!-- contenu de la page -->
 
   <div class="container">
     <h2>JAMES BOND Fan-Page</h2>
     <div id="ooz"><img class="img007" id="premier0" src="IMG/0.png"><img class="img007" id="deuxieme0" src="IMG/0bis.png"><img class="img007" id="premier7" src="IMG/7.png"><img class="img007  tir" id="pistol007" src="IMG/pistol.png"></div>
-
+    <audio id="MonSon" preload="auto">
+    <source src="./IMG/Essai coups de feu-[AudioTrimmer.com].mp3" type="audio/mp3" />
+    Votre navigateur n'est pas compatible
+    </audio>
 
     <ul class="nav nav-tabs">
       <li class=""><a data-toggle="tab" href="#home">Présentation</a></li>
@@ -61,7 +65,7 @@
           <div class="tab-content">
             <div id="soushome" class="tab-pane fade in active">
               <h3>Accueil Présentation</h3>
-                <img class="imgintro" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/BOND_BY_GQ_%28Moscow%2C_2012%2C_exhibition%29_by_shakko_12.jpg/170px-BOND_BY_GQ_%28Moscow%2C_2012%2C_exhibition%29_by_shakko_12.jpg">
+              <img class="imgintro" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/BOND_BY_GQ_%28Moscow%2C_2012%2C_exhibition%29_by_shakko_12.jpg/170px-BOND_BY_GQ_%28Moscow%2C_2012%2C_exhibition%29_by_shakko_12.jpg">
 
 
               <p>James Bond, également connu par son matricule 007, est un personnage de fiction créé en 1953 par l'écrivain et ancien espion britannique Ian Fleming dans le roman Casino Royale.</p>
@@ -297,13 +301,14 @@
                 and Javier Bardem.</p>
               <p>Also new to the exhibition is the Ford Thunderbird driven by Jinx (Halle Berry) in DIE ANOTHER DAY (2002). Jinx, posing as Miss Swift from <em>Space &amp; Technology</em> magazine, arrives in style at Gustav Graves’ spectacular ice palace
                 in Iceland in a coral Thunderbird — it is the 2003 model secured early by the 2002 production. The Thunderbird is joined by Jinx’s costume — Versace leather jacket and skirt, Gina leather stiletto boots — and additional props from the
-                film.</p>
+                film.
+              </p>
               <p>The Ford KA, driven by Camille (Olga Kurylenko) in QUANTUM OF SOLACE, is also featured with one of her costumes created by Jasper Conran.</p>
               <p>The exhibition has over 100 individual items on display including the Aston Martin DB5 from GOLDENEYE (1995), the ‘Wet Nellie’ Lotus Esprit S1 from THE SPY WHO LOVED ME (1977), the Rolls-Royce Phantom III from GOLDFINGER (1964), and the
                 ‘Little Nellie’ Wallis WA-116 Autogyro from YOU ONLY LIVE TWICE (1967).</p>
               <p>To celebrate the new exhibits, Bond In Motion is offering 2-for-1 tickets until the end of 2017 using the code GP001.</p>
-              <p>London Film Museum is located at 45 Wellington Street, Covent Garden and is open seven days a week. Tickets are available at the box office daily or in advance from <a href="http://www.londonfilmmuseum.com"target="_blank">www.londonfilmmuseum.com</a> and
-                <a href="http://www.ticketmaster.co.uk target="_blank"">www.ticketmaster.co.uk</a></p>
+              <p>London Film Museum is located at 45 Wellington Street, Covent Garden and is open seven days a week. Tickets are available at the box office daily or in advance from <a href="http://www.londonfilmmuseum.com" target="_blank">www.londonfilmmuseum.com</a>                and
+                <a href="http://www.ticketmaster.co.uk target=" _blank "">www.ticketmaster.co.uk</a></p>
 
               <br>
 
@@ -731,6 +736,10 @@
           Created by <a href="https://github.com/corent01" target="_blank"><i class="fab fa-github fa-spin"></i> Corentin Warin.</a> &amp; <a href="https://github.com/Guillaumedewolf" target="_blank"><i class="fab fa-github fa-spin"></i> Guillaume Dewolf.</a>
           <p><small>&copy; 2018 All Rights Reserved. </p>
           <p><a href="https://guillaumedewolf.github.io/frontend-AllezCine/" target="_blank"><i class="icon-internet"></i>Site Web AllezCiné</a></p>
+          <audio autoplay="autoplay" preload="auto">
+        <source src="./IMG/James Bond 007 - Intro sequence collage from 1962-2006-[AudioTrimmer.com].mp3" type="audio/mp3" />
+        Votre navigateur n'est pas compatible
+      </audio>
         </div>
       </div>
     </div>
@@ -753,7 +762,21 @@
       </div>
     </div>
   </div>
+  
+  <script>
+          addEventListener('click', function () {
+              JouerSon();
+          });
 
+          function JouerSon() {
+              var sound = document.getElementById("MonSon");
+              sound.play();
+          }
+
+          var monElementAudio = document.getElementById('MonSon');
+monElementAudio.volume = 0.1;
+
+      </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
