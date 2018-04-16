@@ -9,7 +9,7 @@ Projet Becode
 
 ## contributeurs
 
-Guillaume de Wolf
+Guillaume de Wolf  
 Corentin Warin
 
 
